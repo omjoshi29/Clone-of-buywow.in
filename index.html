@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            height:500px;
+            width:70%;
+            margin: auto;
+        }
+        #child1{
+            height:500px;
+            object-fit: cover;
+            width:100%;
+        }
+        #child2{
+            height:500px;
+            background-color: #dbe6c4;
+         
+            width:100%;
+        }
+     #h2{
+        font-family: "Work Sans", sans-serif;
+         font-weight: 600;
+         color:#8d4823;
+         font-size: 16px;
+         margin-top: 160px;
+         
+     }
+   #h2_1{
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color:#191d21;
+   }
+   #child2{
+       text-align: center;
+       line-height: 0px;
+   }
+   #btn,#btn2{
+    font-family:  "poppins", sans-serif;
+       background-color: #000000;
+       color:#ffffff;
+       height:58px;
+       width:205.23px;
+       font-size: 16px;
+       margin-top: 10px;
+   }
+#h2_2{
+    color:#202626;
+    font-size: 37px;
+    font-family: "New York", Iowan Old Style, Apple Garamond;
+    margin-left:300px;
+    margin-top:120px;
+}
+#parent_1,#parent_2,#parent_3,#parent_4,#parent_5{
+    display:flex;
+ justify-content: center;
+ gap:20px;
+ margin-top: 100px;
+}
+
+
+#div{
+    height:450px;
+    width:300px;
+    /* border:1px solid red; */
+}
+#image{
+    height:50%;
+    width:80%;
+    object-fit: cover;
+}
+#btn2{
+ margin-left: 680px;     
+}
+
+#plant{
+    height:650px;
+    width:80%;
+    margin-top: 100px;
+ margin-left: 150px;
+ position:relative;
+}
+#h3{
+    color: white;
+    position:absolute;
+    top:4650px;
+    margin-left: 570px;
+    font-size: 56px;
+    font-weight: 500;
+}
+#h3_2{
+    color: white;
+    position:absolute;
+    top:4720px;
+    margin-left: 570px;
+    font-size: 56px;
+    font-weight: 500;
+}
+#p{
+    font-family:  "poppins", sans-serif;
+    color:#fff;;
+    font-size: 16px;
+    position:absolute;
+    top:4820px;
+    height:72px;
+    width:485.25px;
+    margin-left: 520px;
+    margin-top:40px;
+    text-align: center;
+}
+#p2{
+    font-family:"poppins", sans-serif; 
+    font-size: 44.8px;
+    font-weight: 600;
+    color: #fff;
+    position:absolute;
+    top:4900px;
+    margin-left: 680px;
+}
+#p3{
+    font-family:"poppins", sans-serif; 
+    position:absolute;
+    top:5000px;
+    margin-left: 700px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 10px;
+}
+#btn3{
+    font-family:"poppins", sans-serif; 
+    position:absolute;
+   top:5050px;
+   margin-left: -710px;
+   height:46.69px;
+   width:150px;
+   background: transparent;
+   font-size: 18px;
+   color: #fff;
+   border-radius: 10px;
+   border:2px solid #fff;
+   font-weight: 600;
+}
+#btn3:hover{
+    background-color:#fff;
+    color:#000000;
+    transition:color 1s;
+    transition:background-color 1s;
+}
+    </style>
+</head>
+<body>
+  <div id="main">
+           <img  id= "child1" src="https://cdn.shopify.com/s/files/1/1375/4957/files/1280x1200_3_d0082469-362f-4078-92fa-76bdde3fa3cc_992x.jpg?v=1647522048" alt="">
+        
+<div id="child2">
+ 
+           <h2 id ="h2" >IF YOU HIT SNOOZE, YOU LOOSE!</h2> 
+           <h2 id="h2_1">BUY 1 GET 1 FREE</h2>
+           <button id="btn">SHOP NOW</button>
+
+        </div>
+  </div>
+
+  <p id="h2_2">Best Selling Skin & Hair Care</p>
+    <div id="parent_1"></div>
+     <button id="btn2">Show More</button>
+
+
+     <p id="h2_2">Best Selling Sunscreens</p>
+     <div id="parent_2"></div>
+     <button id="btn2">Show More</button>
+
+     <p id="h2_2">Red Onion Black Seed Oil Range</p>
+      <div id="parent_3"></div>
+      <button id="btn2">Show More</button>
+
+      <p id="h2_2">Vitamin C Range</p>
+      <div id="parent_4"></div>
+      <button id="btn2">Show More</button>
+
+      <p id="h2_2">Ubtan Range</p>
+      <div id="parent_5"></div>
+      <button id="btn2">Show More</button>
+
+
+    <img id="plant" src="https://cdn.shopify.com/s/files/1/1375/4957/files/main-banner.jpg?v=1644229820" alt="">
+  
+    <h3 id="h3">NATURE IS IN</h3>
+    <h3 id="h3_2">OUR NATURE</h3>
+     <p id="p">With the goal of shipping 1 crore seed pouches with every website purchase, our Green Hands Initiative is a conscious step towards a sustainable future.</p>
+     <p id="p2">709,869</p>
+     <p id="p3">SEEDS SHIPPED</p>
+     <button id="btn3">VIEW MORE</button>
+
+</body>
+</html>
+<script type="module">
+let arr=[
+{
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-hair-oil-1_410x.jpg?v=1646380369",
+          title:"Onion Hair Oil With Black Seed Oil Extracts Helps Control Hair Fall -",
+          price:"₹499.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-shampoo-1_410x.jpg?v=1646381279",
+          title:"Onion Shampoo For Hair Growth And Hair Fall Control - 300mL",
+          price:"₹499.00",
+       
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/ACV-FW_410x.jpg?v=1643119836",
+          title:"Apple Cider Vinegar Foaming Face Wash With Built-In Foaming Face Brush For Deep Cleansing",
+          price:"₹399.00",
+        
+      }, 
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/vitCFWbrush_410x.jpg?v=1643129922",
+          title:"Vitamin C Face Wash With Built-In Foaming Face Brush For Skin Brightening - 150 Ml",
+          price:"₹399.00",
+       
+      }
+] 
+
+let arr2=[
+    {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Sunscreen-35-d-shape-100-1_410x.jpg?v=1612964500",
+          title:"Sunscreen Matte Finish - SPF 35 PA++ - Daily Broad Spectrum - UVA..",
+          price:"₹375.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/UV-Water-Sunscreen-2_410x.jpg?v=1635404415",
+          title:"UV Water Transparent Sunscreen Spray SPF 30 - Quick Absorbing - Oil..",
+          price:"₹399.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Sunscreenserum353_410x.jpg?v=1631515529",
+          title:"Matte Finish Sunscreen Face Serum SPF 35 PA++ With Raspberry, Carrot..",
+          price:"₹599.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/am2pm_1_410x.jpg?v=1595019662",
+          title:"AM2PM SPF50 Water Resistant No Parabens & Mineral Oil Sunscreen",
+          price:"₹349.00",
+      
+      },
+]
+
+let arr3= [
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-hair-oil-1_410x.jpg?v=1646380369",
+          title:"Onion Hair Oil With Black Seed Oil Extracts Helps Control Hair Fall -",
+          price:"₹499.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-shampoo-1_410x.jpg?v=1646381279",
+          title:"Onion Shampoo For Hair Growth And Hair Fall Control - 300mL",
+          price:"₹499.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair_Strengthening_Regime_410x.jpg?v=1575982162",
+          title:"Onion Hair Oil Ultimate Hair Care Combo Kit For Hair Fall Control -",
+          price:"₹1,299.00 ",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-Hair-Oil-with-Comb-200-1_410x.jpg?v=1646899880",
+          title:"Onion Oil For Hair Fall Control With Comb Applicator - 200mL",
+          price:"₹499.00",
+      
+      }
+  ];
+
+  let arr4=[
+{
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/DSC0265_2_410x.jpg?v=1639212076",
+          title:"Vitamin C Face Wash In Paper Tube (Eco Friendly Packaging) - No",
+          price:"₹249.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/vitCFWbrush_410x.jpg?v=1643129922",
+          title:"Vitamin C Face Wash With Built-In Foaming Face Brush For Skin",
+          price:"₹399.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/vitCserum_1_410x.jpg?v=1643130400",
+          title:"Vitamin C Face Serum For Skin Whitening - Brightening And",
+          price:"₹699.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/vitCFWtube_410x.jpg?v=1643130531",
+          title:"Brightening Vitamin C Face Wash For Improve Skin's Texture - 100 Ml",
+          price:"₹249.00",
+      
+      }
+]
+
+let arr5=[
+{
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Ubtan-FW-150-1_410x.jpg?v=1639421804",
+          title:"Ubtan Foaming Face Wash With Built-In Face Brush For Tan Removal",
+          price:"₹399.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/ubtan-face-wash-tube_410x.jpg?v=1639421776",
+          title:"Ubtan Face Wash - 100mL",
+          price:"₹249.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/Ubtan-scrub-1_e38d7e1b-f62f-4a66-87b8-42ef3e57f381_410x.jpg?v=1635142931",
+          title:"Ubtan Face & Body Scrub With Chickpea Flour, Almond Shell",
+          price:"₹399.00",
+      
+      },
+      {
+          img:"https://cdn.shopify.com/s/files/1/1375/4957/products/ubtan-serum-1_0cee3e90-4048-46d6-b838-24e0c755e32d_410x.jpg?v=1634724825",
+          title:"Ubtan Face Serum - OIL FREE - For Anti Tanning, Radiance Boosting,",
+          price:"₹599.00",
+      
+      }
+]
+  
+import append from "./scripts_index/appendData.js";
+
+let parent1= document.querySelector("#parent_1");
+append(arr,parent1);
+
+
+let parent2 = document.querySelector("#parent_2")
+append(arr2,parent2);
+
+let parent3= document.querySelector("#parent_3");
+append(arr3,parent3);
+
+let parent4= document.querySelector("#parent_4");
+append(arr4,parent4);
+
+let parent5= document.querySelector("#parent_5");
+append(arr5,parent5);
+
+</script>
