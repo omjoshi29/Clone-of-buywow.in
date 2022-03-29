@@ -102,6 +102,14 @@
     font-size: 56px;
     font-weight: 500;
 }
+#green{
+    height:100px;
+    width:150px;
+    position:absolute;
+    top:4580px;
+    margin-left:-720px;
+  
+}
 #p{
     font-family:  "poppins", sans-serif;
     color:#fff;;
@@ -154,6 +162,7 @@
     transition:background-color 1s;
 }
     </style>
+    <link rel="stylesheet" href="./components_css/Footer.css">
 </head>
 <body>
   <div id="main">
@@ -192,12 +201,16 @@
 
     <img id="plant" src="https://cdn.shopify.com/s/files/1/1375/4957/files/main-banner.jpg?v=1644229820" alt="">
   
+    <img id ="green" src="https://cdn.shopify.com/s/files/1/1375/4957/files/wow_green_hand.png?v=1644231590" alt="">
+
     <h3 id="h3">NATURE IS IN</h3>
     <h3 id="h3_2">OUR NATURE</h3>
      <p id="p">With the goal of shipping 1 crore seed pouches with every website purchase, our Green Hands Initiative is a conscious step towards a sustainable future.</p>
      <p id="p2">709,869</p>
      <p id="p3">SEEDS SHIPPED</p>
      <button id="btn3">VIEW MORE</button>
+
+     <div id="bottom"></div>
 
 </body>
 </html>
@@ -355,4 +368,9 @@ append(arr4,parent4);
 let parent5= document.querySelector("#parent_5");
 append(arr5,parent5);
 
+import {footer} from "./components_index/footer.js";
+
+let bottom= document.querySelector("#bottom");
+
+bottom.innerHTML= footer();
 </script>
