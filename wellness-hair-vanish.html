@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wellnesshairvanish.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <div id ="navbar">
+
+    </div>
+    <h1 class="one">Hair Vanish</h1>
+    <div id="banner">
+        <img src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885">
+    </div>
+    <div id="container">
+
+    </div>
+    <div id="footer" style="margin-top: 100px;">
+
+    </div>
+</body>
+</html>
+<script type="module">
+ var products=[{"name":"Hair Vanish Sensitive No Parabens And Moneral Oil -100Ml","price":"399","ratings":"169 Reviews","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Sensitive-1_845b49a6-0ac7-4781-9a61-1b688f44bae0_520x.jpg?v=1633325689"},
+ {"name":"Hair Vanish For Women No Parabens And Moneral Oil -100Ml","price":"399","ratings":"24 Reviews","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Women-1_7e162f7d-aadb-4903-b9c5-41850fcce4b9_520x.jpg?v=1633325633"},
+ {"name":"Hair Vanish For Men No Parabens And Moneral Oil -100Ml","price":"399","ratings":"8Reviews","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Men-1_cfb19fdf-9749-4766-a53e-12ea64566b8a_520x.jpg?v=1633325742"}];
+ products.map(function(elem){
+     var div = document.createElement('div')
+     div.setAttribute("id","div");
+     var name=document.createElement('p');
+     name.innerText=elem.name;
+     name.setAttribute("id","name");
+     var price= document.createElement('p');
+     price.innerText=elem.price;
+     price.setAttribute("id","price")
+     var image1=document.createElement('img');
+     image1.src=elem.image;
+     image1.setAttribute("id","image");
+     var button = document.createElement('button');
+     button.innerText="Add to cart";
+     button.setAttribute("id","button")
+    //  avatar.setattribute("id","avatar");
+     div.append(image1,name,price,button);
+     document.querySelector("#container").append(div);
+ })
+ import footer from'./components/footer.js';
+    document.getElementById("footer").innerHTML=footer();
+</script>

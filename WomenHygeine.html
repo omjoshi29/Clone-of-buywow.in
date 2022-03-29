@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="womenhygeine.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+    <div id ="navbar">
+
+    </div>
+    <h1 class="one">Essential oil</h1>
+    <div id="banner">
+        <img src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885">
+    </div>
+    <div id="container">
+
+    </div>
+    <div id="footer" style="margin-top: 100px;">
+
+    </div>
+</body>
+</html>
+<script type="module">
+    import footer from'./components/footer.js';
+    document.getElementById("footer").innerHTML=footer();
+var products = [
+    {"name":"Freedom Reusable Menstrual Cup and Wash Pre Childbirth - Small (Under 30 Years)","price":"599","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-M-2_520x.jpg?v=1633670121"},{"name":" Freedom Cleansing Foaming Wash, Lactic Acid and Tea Tree Oil - 120 ml, Lactic Acid and Tea Tree Oil - 120 ml","price":"399","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-Wash-2_375x.jpg?v=1634026623"},{"name":" Freedom Reusable Menstrual Cup and Wash Post Childbirth - Large (Above 30 Years)","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-L-1_375x.jpg?v=1633670250"}]
+    products.map(function(elem){
+    var div=document.createElement("div");
+    div.setAttribute("id","div");
+    var image1=document.createElement('img');
+    image1.src=elem.image;
+    image1.setAttribute("id","image1")
+    var name=document.createElement('p');
+    name.innerText=elem.name;
+    name.setAttribute("id","name")
+    var price=document.createElement('p');
+    price.innerText=elem.price;
+    var button =document.createElement('button');
+    button.innerText="Add to cart";
+    div.append(image1,name,price,button);
+    document.querySelector("#container").append(div);
+
+})
+</script>

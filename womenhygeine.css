@@ -1,0 +1,65 @@
+#navbar{
+    background-color:#e9ecef ;
+    width: 100%;
+    height: 80px;
+}
+.one{
+    text-align: center;
+    
+}
+#banner img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+    height: 400px;
+}
+
+#container{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    
+}
+
+#image1:first-child{
+    height: 85%;
+}
+#image1{
+    height: 85%;
+    width: 80%;
+}
+#name{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+#container button{
+    width: 240px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+ 
+
+@media all and (min-width:381px) and (max-width:850px){
+    #banner img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 90%;
+        height: 320px;
+    }
+}
+@media all and (min-width:50px) and (max-width:380px){
+
+    #banner img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 90%;
+        height: 200px;
+    }
+}
