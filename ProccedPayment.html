@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="./UPI.css">
+  <script defer src="./PaymentScript.js"></script>
+  <style>
+.procedtopayment{
+  margin-left: 40%;
+  width: 250px;
+}
+
+  </style>
+</head>
+<body> <h6>
+  <button data-modal-target="#modal" id="paybutton" class="procedtopayment"><span>PAY VIA UPI</span>
+    
+    <img id="payimglogo" src="https://cdn.gokwik.co/v4/images/upi-icons.svg" alt=""/>
+    <img id="payimglogo" src="https://cdn.gokwik.co/v4/images/right-arrow.svg" alt=""/>
+  </button><br>
+  <button data-modal-target="#modal" id="paybutton" class="procedtopayment"><span>PAY VIA COD</span>
+    <img id="payimglogo" src="https://pdp.gokwik.co/assets/icons/cod.svg" alt=""/>
+    <img id="payimglogo" src="https://cdn.gokwik.co/v4/images/right-arrow.svg" alt=""/>
+  </button>
+
+
+
+
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title"><img id="popimagelogo" src="https://cdn.gokwik.co/merchant/1nwn0k1szfl0ic3qxl/logo1646758604488.png" alt=""> </div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <h2>Open any UPI App & scan QR Code to pay</h2>
+    <div class="modal-body">
+      
+  <div id="upiDeatail">
+   
+    <div id="UPiLOGOS">
+    <div><img id="payimglogo" src="https://pdp.gokwik.co/assets/icons/phonepe-sm.svg" alt=""><p>Phone Pay</p></div>
+    
+    <div><img src="https://pdp.gokwik.co/assets/icons/tez-sm.svg" alt=""><p>Google Pay</p></div>
+    <div><img src="https://pdp.gokwik.co/assets/icons/upi-sm.svg" alt=""><p> Bhim</p></div>
+    <div><img src="https://pdp.gokwik.co/assets/icons/paytm-sm.svg" alt=""><p>Paytm</p></div>
+  </div>
+  <div id="QRcode">
+    <img src="data:image/png;base64,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" alt=""></div>
+
+
+  
+  </div>
+        
+
+ 
+     
+    </div>
+    <hr > 
+
+
+    <h2>You will get a payment link on</h2>
+    <div id="sendLink">
+      <span><h2>+91 - 8000000008</h2></span>
+      
+        <button class="procedtopayment">Get Link</button>
+    </div>
+   
+  </div>
+  <div id="overlay"></div>
+</body>
+</html>

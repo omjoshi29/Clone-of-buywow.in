@@ -1,0 +1,35 @@
+#upiDeatail
+{
+    border: solid;
+    width: 62%;
+    height: inherit;
+    display: flex;
+  justify-content: space-around;
+   
+}
+/* #upiDeatail>div{
+   border: solid;
+  
+   
+} */
+#UPiLOGOS
+{
+    background-color: white;
+    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+}
+hr{
+    text-align: left;
+    width: 60%;
+    margin-left:10px;
+}
+#sendLink
+{
+    width: 62%;
+   
+    display: flex;
+    justify-content: space-around;
+   
+}

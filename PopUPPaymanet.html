@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="./PaymentScript.js"></script>
+</head>
+<body> <h6>
+  <button data-modal-target="#modal" id="paybutton"><span>PAY VIA COD/UPI</span>
+    <img id="payimglogo" src="https://cdn.gokwik.co/v4/images/upi-icons.svg" alt=""/>
+    <img id="payimglogo" src="https://cdn.gokwik.co/v4/images/right-arrow.svg" alt=""/>
+  </button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title"><img id="popimagelogo" src="https://cdn.gokwik.co/merchant/1nwn0k1szfl0ic3qxl/logo1646758604488.png" alt=""> </div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="form-group">
+        <form action="" id="myformPayment">
+          <input type="text" class="form-control" id="name"  placeholder="Name*">
+               <input type="email"    class="form-control" id="email"  placeholder="Email*">
+         
+        <input type="street" class="form-control" id="autocomplete" placeholder="Street*">
+
+        <input type="city"  class="form-control" id="inputCity"  placeholder="City*">
+     
+        <input type="state"  class="form-control" id="inputState"  placeholder="State*">
+    
+        <input type="zip"  class="form-control"  id="inputZip" placeholder="Zip *">
+    
+        <input type="text"  class="form-control"id="number"placeholder="Number *"> 
+        
+              <input type="submit" value="Processed to payment">
+              </form>
+      </div>
+      
+      <div></div>
+    </div>
+  </div>
+  <div id="overlay"></div>
+</body>
+</html>
