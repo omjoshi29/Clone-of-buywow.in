@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+
+    <style>
+       
+      /* .two{
+        width: 190px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      } */
+        input {
+  width: 690px;
+  height: 50px;
+  /* border-radius: 5px; */
+  /* text-align: center; */
+  line-height: 40px;
+  background-color: #e9ecef;
+}
+#form{
+  margin-left: 29%;
+}
+.a a{
+  font-size: 20px;
+  text-decoration: none;
+  color:black;
+   
+}
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Sign in to your account</h1>
+    <div class="two" style="margin-bottom: 100px;">
+
+    <form id="form">
+      <label style="margin-bottom: 200px;font-size: 20px;">Email Address</label><br>
+      <input id="user" type="text" style="margin-top: 18px;margin-bottom: 18px;"/><br>
+       <label style="font-size: 20px;margin-bottom: 40px;margin-top: 18px;">Password</label><br>
+      <input id="pass" type="password" style="margin-top: 18px;"/><br>
+      <input type="submit" value="Sign in"  style="margin-top: 15px;width: 10%; font-size:20px;color: aliceblue; background-color: black;"/><br>
+      <br>
+      <div class="a">
+      <a href="#">Forgot your password?</a> &nbsp; <a href="#">Not a member</a> &nbsp; <a href="#">Register here</a>
+    </div>
+    </form>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script type="module" src="login.js">
+  // import footer from'./components/footer.js';
+  //   document.getElementById("footer").innerHTML=footer();
+  // var regdUsers = JSON.parse(localStorage.getItem("signUpDetails"));
+  // console.log(regdUsers);
+
+  // document.querySelector("#form").addEventListener("submit", formSubmit);
+
+  // var form = document.querySelector("#form");
+
+ 
+  // function formSubmit(event) {
+  //   event.preventDefault();
+
+  //   var user = form.user.value;
+  //   var pass = form.pass.value;
+  //   console.log(user, pass);
+
+  //   var flag= false
+  //   for (var i = 0; i < regdUsers.length; i++) {
+  //     if (regdUsers[i].user == user && regdUsers[i].pass == pass) {
+  //       flag=true;
+  //     } else {
+  //       flag=false;
+  //     }
+  //   }
+  //   if(flag==true){
+
+  //     document
+  //     .querySelector("input[type='submit']")
+  //     .addEventListener("click", function () {
+  //       window.location.href = "index.html";
+  //     });
+  //   }
+  //   else {
+  //     alert("invalid credentials")
+  //   }
+  
+  // }
+</script>

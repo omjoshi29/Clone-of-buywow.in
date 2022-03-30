@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="footer.css">
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+    
+
+    <title>Document</title>
+    <style>
+     
+      .one{
+        width: 190px;
+        height: 100px;
+        margin-left: 29%;
+        /* margin-right: auto; */
+        /* display: block; */
+        margin-bottom: 400px;
+        
+      }
+      /* input {
+  width: 190px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+} */
+input {
+  width: 690px;
+  height: 50px;
+  /* border-radius: 5px; */
+  /* text-align: center; */
+  line-height: 40px;
+  background-color: #e9ecef;
+}
+#footer{
+  margin-top: 400px;
+}
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Create an account</h1>
+
+    <div class="one">
+
+    <form id="form">
+      <label >First name</label><br>
+      <br>
+      <input id="user" type="text" />
+      <br>
+      <label style="margin-top: 2px;" >Last name</label><br>
+<br>
+      <input id="user" type="text" />
+<br>
+<label >Email</label><br>
+
+      <input id="email" type="text" style="margin-top: 5px;" />
+      <br>
+      <label >Password</label><br>
+
+      <input id="pass" type="text" style="margin-top: 5px;"/>
+      <br>
+      <input type="submit" value="Create an account" style="margin-top: 15px;width: auto; font-size:20px;color: aliceblue; background-color: black;">
+    </form>
+    <!-- <div style="padding-top: 20px; padding-left: 20px; width: 100%;">Already a member &nbsp;&nbsp; <a href="login.html" style="text-decoration: none;color: black;">Sign in here</a></div> -->
+  </div>
+  <div style="margin-top: -60px;margin-left: 400px; font-size: 20px;">Already a member? <a href ="login.html" style="text-decoration: none;color: black;">Sign in here</a></div>
+  <div id="footer" style="margin-top:200px;">
+
+  </div>
+  </body>
+</html>
+
+<script type="module" src="signup.js">
+  // import footer from'./components/footer.js';
+  //   document.getElementById("footer").innerHTML=footer();
+  // document.querySelector("#form").addEventListener("submit", myFormSubmit);
+
+  // var signupArr = JSON.parse(localStorage.getItem("signUpDetails")) || [];
+  // function myFormSubmit() {
+  //   event.preventDefault();
+  //   var signupObj = {
+  //     email: document.querySelector("#email").value,
+  //     user: document.querySelector("#user").value,
+  //     pass: document.querySelector("#pass").value,
+  //   };
+    
+  //   signupArr.push(signupObj);
+  //   console.log(signupArr);
+  //   localStorage.setItem("signUpDetails", JSON.stringify(signupArr));
+
+  //   document
+  //     .querySelector("input[type='submit']")
+  //     .addEventListener("click", function () {
+  //       window.location.href = "login.html";
+  //     });
+  // }
+</script>
