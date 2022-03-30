@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face cream</title>
+    <style>
+    
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #sortDiv {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #sorter {
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: lighter;
+        }
+
+        #sorter>option {
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: lighter;
+        }
+
+        #face_cream_Div {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, fit-content);
+            gap: 30px;
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        #face_cream_Div>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #face_cream_Div>div>img {
+            width: 100%;
+        }
+
+        #face_cream_Div>div>p {
+            margin-top: 0px;
+        }
+
+        #face_cream_Div>div>p:nth-child(2) {
+            margin-top: 30px;
+            font-weight: lighter;
+            text-decoration: none;
+            text-transform: capitalize;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        #face_cream_Div>div>p:nth-child(3) {
+            font-weight: 600;
+        }
+
+        #cartbtn {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            font-weight: lighter;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        #face_cream_Div>div:hover #cartbtn {
+            display: block;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+
+    <!-- Main container -->
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="face_cream_Div"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+</html>
+<script>
+    
+    const face_cream=[
+    {
+      "name": "Vitamin C Face Cream For Skin Whitening, Brightening & Hyperpigmentation",
+      "price": "599",
+      "ratings": "4.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Vit-C-Cream-4_fbaccf05-787b-44e7-8152-b0edbda20313_1280x.jpg?v=1635399354"
+    },
+    {
+      "name": "Anti Aging Night Cream - 50 ml",
+      "price": "699",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/anti-aging-night-cream_1280x.jpg?v=1640932739"
+    },
+    {
+      "name": "10 in 1 Active Miracle No Parabens & Mineral Oil Day Cream - 50 ml",
+      "price": "649",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/10in1daycream1_1280x.jpg?v=1617863952"
+    },
+    {
+      "name": "Retinol Face Cream - Oil Free, Quick Absorbing - For All Skin Types - No Parabens, Silicones, Color, Mineral Oil & Synthetic Fragrance - 50 ml",
+      "price": "599",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/retinol-face-cream_1280x.jpg?v=1639561124"
+    },
+    {
+      "name": "Aloe Vera Face Cream - Multi-Vitamin - Light Quick Absorbing - For Normal to Oily Skin - No Parabens, Silicones, Color, Mineral Oil & Synthetic Fragrance - 50 ml",
+      "price": "209",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Aloe-Vera-Cream-4_1280x.jpg?v=1635398682"
+    },
+    {
+      "name": "Day Face Cream - SPF 20 - with Rosehip Oil & Shea Butter - OIL FREE - Quick Absorbing - Protect & Soften Skin - 50 ml Day Face Cream - SPF 20 - with Rosehip Oil & Shea Butter - OIL FREE - Quick Absorbing - Protect & Soften Skin - 50 ml Day Face Cream - SPF 20 - with Rosehip Oil & Shea Butter - OIL FREE - Quick Absorbing - Protect & Soften Skin - 50 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/day-face-cream_1280x.jpg?v=1640942272"
+    },
+    {
+      "name": "Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml",
+      "price": "209",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Coconut-perfecting-cream-5_1280x.jpg?v=1635398921"
+    },
+    {
+      "name": "Red Onion Face Cream - Oil Free, Quick Absorbing - For All Skin Types - No Parabens, Silicones, Color, Mineral Oil & Synthetic Fragrance - 50 ml",
+      "price": "209",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-4_1280x.jpg?v=1578293823"
+    },
+    {
+      "name": "Coconut Water Full Cream With Hyaluronic Acid for Deep Hydration & Youthful Skin - For All Skin Types - 50 ml",
+      "price": "299",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/coconut-water-cream_1280x.jpg?v=1641019765"
+    }
+  ]
+let face_cream_Div = document.getElementById("face_cream_Div");
+
+function appendProduct(face_cream) {
+    face_cream_Div.innerHTML = null;
+    face_cream.forEach(function (elem) {
+        let image = document.createElement("img");
+        image.src = elem.image;
+
+        let name = document.createElement("p");
+        name.innerText = elem.name;
+
+        let price = document.createElement("p");
+        price.innerText = "₹" + elem.price;
+
+        let ratings = document.createElement("p");
+        ratings.innerText = elem.ratings;
+
+        let cartbtn = document.createElement("button");
+        cartbtn.innerText = "Add to cart";
+        cartbtn.setAttribute("id", "cartbtn");
+
+        let box = document.createElement("div");
+        box.append(image, name, price, ratings, cartbtn);
+        face_cream_Div.append(box);
+    })
+}
+appendProduct(face_cream);
+
+document.querySelector("#sorter").addEventListener("click", sortByPrice);
+function sortByPrice() {
+    face_cream.map(function (elem) {
+        var sorting = document.querySelector("#sorter").value;
+        // console.log(sorting);
+        if (sorting == "l2h") {
+            face_cream.sort(function (a, b) { return a.price - b.price })
+            appendProduct(face_cream)
+        }
+        else if (sorting == "h2l") {
+            face_cream.sort(function (a, b) { return b.price - a.price })
+            appendProduct(face_cream)
+        }
+        else if (sorting == "rl2h") {
+            face_cream.sort(function (a, b) { return a.ratings - b.ratings })
+            appendProduct(face_cream)
+        }
+        else if (sorting == "rh2l") {
+            face_cream.sort(function (a, b) { return b.ratings - a.ratings })
+            appendProduct(face_cream)
+        }
+        else if (sorting == "a2z") {
+            function SortArray(x, y) {
+                if (x.name < y.name) { return -1; }
+                if (x.name > y.name) { return 1; }
+                return 0;
+            }
+            var s = face_cream.sort(SortArray)
+            appendProduct(s)
+        }
+        else if (sorting == "z2a") {
+            function SortArray(x, y) {
+                if (x.name > y.name) { return -1; }
+                if (x.name < y.name) { return 1; }
+                return 0;
+            }
+            var s = face_cream.sort(SortArray)
+            appendProduct(s)
+        }
+    })
+}
+
+    
+</script>
