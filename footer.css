@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     background-color: #746661;
-    line-height: 44px;
+    line-height: 32px;
     color: white;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -23,7 +23,7 @@ a{
     display: block;
 }
 #one{
-    line-height: 40px;
+    line-height: 24px;
 }
 
 #two .social-links{
