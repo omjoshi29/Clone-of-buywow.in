@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Lotion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./bathprod.css">
+</head>
+
+<body>
+    <div id="bathHeader">
+        <h1>Body Lotion</h1>
+        <img src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885"
+            alt="">
+    </div>
+
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="bathDiv"></div>
+</body>
+
+</html>
+<script type="module">
+    var bathProducts = [
+        { name: "Coconut Milk and Argan Oil Body Lotion - Medium Hydration - No Mineral Oil, Parabens, Silicones, Color & PG - 100 ml", price: "50", ratings: "4.9", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Coconutlotion1001_1280x.jpg?v=1632988194" }, { name: "Aloe Vera Body Lotion (Ultra Light) - 400 ml", price: "140", ratings: "5.0", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Aloebodylotion1_ecd8d881-6c13-48fb-af63-f5bb15409496_1280x.jpg?v=1643262158" }, { name: "Coconut Milk and Argan Oil Body Lotion, Medium Hydration - 300 ml", price: "400", ratings: "4.8", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/coconutmilk_arganbodylotion1_ac8d46e5-8efc-4a1e-ae8d-a3660901c853_1280x.jpg?v=1636630369" }, { name: "Shea Butter and Cocoa Butter Moisturizing Body Lotion, Deep Hydration - 300 ml", price: "400", ratings: "5.0", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/SB_CB_lotion_1_1280x.jpg?v=1617430414" }, { name: "Himalayan Rose Body Lotion -Toning & Hydrating - with Rose Water, Beetroot Extract - No Mineral Oil, Silicones & Color - 400 ml", price: "400", ratings: "4.7", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Rosebodylotion1_bd191d4d-5dd6-4e57-b245-0e55bf6d6771_1280x.jpg?v=1626442695" }, { name: "Vitamin C Body Lotion, Non Sticky & Greasy, Moisturising & Smoothening Care, Kakadu Plum - No Mineral Oil, Silicones & Color, Citrus - 400 ml", price: "450", ratings: "4.8", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/VITCbodylotion1_233e309c-a5c4-42b8-a2e4-a42a58b9eb6e_1280x.jpg?v=1626442696" }, { name: "Ubtan Body Lotion - Non Sticky & Non Greasy - Anti-Tanning & Smoothening Care - with Saffron Extract, Sandalwood Oil, Rose Water - No Mineral Oil, Silicones & Color - 400 ml", price: "140", ratings: "4.5", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Ubtanbodylotion1_ef5f5a78-7cab-42d9-bcde-432d02c761db_1280x.jpg?v=1626442695" }, { name: "Shea Butter and Cocoa Butter Moisturizing Body Lotion - Deep Hydration - No Mineral Oil, Parabens, Silicones, Color & PG - 200 ml", price: "100", ratings: "4.9", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Shealotion2001_1280x.jpg?v=1611417996" }, { name: "Green Tea Body Lotion - Hydrating & Replenishing - with Green Tea Extract, Shea Butter - 400 ml", price: "140", ratings: "4.7", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/green-tea-body-lotion_1280x.jpg?v=1641278694" }, { name: "Coconut Milk and Argan Oil Body Lotion - Medium Hydration - No Mineral Oil, Parabens, Silicones, Color & PG - 200 ml", price: "110", ratings: "4.5", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Coconutlotion2001_1280x.jpg?v=1632988278" }
+    ];
+
+    var bathDiv = document.getElementById("bathDiv");
+
+    import appendProduct from './bathprod.js';
+    appendProduct(bathProducts);
+
+    document.querySelector("#sorter").addEventListener("click", sortByPrice);
+    function sortByPrice() {
+        bathProducts.map(function (elem) {
+            var sorting = document.querySelector("#sorter").value;
+            console.log(sorting);
+            if (sorting == "l2h") {
+                bathProducts.sort(function (a, b) { return a.price - b.price })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "h2l") {
+                bathProducts.sort(function (a, b) { return b.price - a.price })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "rl2h") {
+                bathProducts.sort(function (a, b) { return a.ratings - b.ratings })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "rh2l") {
+                bathProducts.sort(function (a, b) { return b.ratings - a.ratings })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "a2z") {
+                function SortArray(x, y) {
+                    if (x.name < y.name) { return -1; }
+                    if (x.name > y.name) { return 1; }
+                    return 0;
+                }
+                var s = bathProducts.sort(SortArray)
+                appendProduct(s)
+            }
+            else if (sorting == "z2a") {
+                function SortArray(x, y) {
+                    if (x.name > y.name) { return -1; }
+                    if (x.name < y.name) { return 1; }
+                    return 0;
+                }
+                var s = bathProducts.sort(SortArray)
+                appendProduct(s)
+            }
+        })
+    }
+</script>
