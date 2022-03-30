@@ -10,14 +10,19 @@
    height:350px;
    margin-left:150px;
    margin-top: 30px;
+  
 }
-a{
+#a{
     text-decoration: none;
     color: white;
     /* font-weight: bold; */
     font-family: HCoGothamSSmSemiBold,Arial,Sans-Serif;
-
 }
+    #a1{
+        text-decoration: none;
+        color: white;
+    }
+
 #logo img {
     margin-top: 29%;
     height: 20%;
@@ -26,7 +31,7 @@ a{
     display: block;
 }
 #one{
-    line-height: 32px;
+    line-height: 30px;
 }
 
 #two .social-links{
@@ -38,8 +43,13 @@ a{
     list-style-type: none;
 }
 #four{
+
     margin-right: 5px;
-    
+    line-height: 35px;
+    font-family:"poppins", sans-serif; 
+}
+#three{
+    line-height: 35px;
 }
 ul li{
     list-style: none;
@@ -50,6 +60,10 @@ ul li{
         grid-template-rows: repeat(5,1fr);
         padding-left: 20px;
         padding-bottom: 10px;
+        height:auto;
+        width:100%;
+        text-align: center;
+        margin-left:0px;
     }
     #two{
       margin-top: -40px;
@@ -68,7 +82,14 @@ ul li{
         margin-left: auto;
         margin-right: auto;
         width: 200px;
-        
+        text-align: center;
+    }
+    #a{
+       
+        text-align: center;
+    }
+    #a1{
+        text-align: center;
     }
 }
 @media all and (min-width:50px) and (max-width:380px){

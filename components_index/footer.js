@@ -13,34 +13,34 @@ const footer= () =>{
         <b style="margin-left: 28px;">STAY CONNECTED</b><br>
         <ul class="social-links">
 
-            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li> 
-            <li><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram-square"></i></a></li>
-            <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="https://in.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>
+            <li><a href="https://www.facebook.com/" id="a1"><i class="fa-brands fa-facebook-f"></i></a></li> 
+            <li><a href="https://twitter.com/i/flow/login" id="a1"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/?hl=en" id="a1"><i class="fa-brands fa-instagram-square"></i></a></li>
+            <li><a href="https://www.youtube.com/" id="a1"><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href="https://in.pinterest.com/" id="a1"><i class="fa-brands fa-pinterest-p"></i></a></li>
          </ul>
 </div>
 <div id="three">
     <b>MAIN MENU</b><br>
-    <a href="#">Skin</a><br>
-    <a href="#">Hair</a><br>
-    <a href="#">Bath & Body</a><br>
-     <a href="#">Mother & Child</a><br>
-     <a href="#">Wellness</a><br>
-     <a href="#">Nutrition & Health</a><br>
-     <a href="#">Combos</a><br>
-     <a href="#">Collections</a><br>
+    <a href="#" id="a">Skin</a><br>
+    <a href="#" id="a">Hair</a><br>
+    <a href="#" id="a">Bath & Body</a><br>
+     <a href="#" id="a">Mother & Child</a><br>
+     <a href="#" id="a">Wellness</a><br>
+     <a href="#" id="a">Nutrition & Health</a><br>
+     <a href="#" id="a">Combos</a><br>
+     <a href="#" id="a">Collections</a><br>
 </div>
 <div id="four">
     <b>INFORMATION</b><br>
-    <a href="#">About Us</a><br>
-    <a href="#">Return/Refund?Cancellation Policy</a><br>
-    <a href="#">Terms & Conditions</a><br>
-     <a href="#">Privacy Policy</a><br>
-     <a href="#">Shipping &Delivery Policy</a><br>
-     <a href="#">Track Your Order</a><br>
-     <a href="#">Contact Us</a><br>
-     <a href="#">Blog</a><br>
+    <a href="#" id="a">About Us</a><br>
+    <a href="#" id="a">Return/Refund?Cancellation Policy</a><br>
+    <a href="#" id="a">Terms & Conditions</a><br>
+     <a href="#" id="a">Privacy Policy</a><br>
+     <a href="#" id="a">Shipping &Delivery Policy</a><br>
+     <a href="#" id="a">Track Your Order</a><br>
+     <a href="#" id="a">Contact Us</a><br>
+     <a href="#" id="a">Blog</a><br>
 </div>
 </div>`
 }
