@@ -41,5 +41,26 @@ document.querySelector("#myformPayment").addEventListener("submit",func);
 function func(e)
 {
   e.preventDefault();
-  window.location.href="./ProccedPayment.html"
+  let name=document.querySelector("#name").value;
+  let email=document.querySelector("#email").value;
+  let street=document.querySelector("#autocomplete").value;
+  let City=document.querySelector("#inputCity").value;
+  let State=document.querySelector("#inputState").value;
+  let zip=document.querySelector("#inputZip").value;
+  let number=document.querySelector("#number").value;
+ var Addressarr=[];
+  var obj={
+    
+    name:name,
+    email:email,
+    street,
+    City,
+    State,
+    zip,
+    number,
+  }
+  Addressarr.push(obj)
+
+  localStorage.setItem("Address",JSON.stringify(Addressarr))
+  // window.location.href="./ProccedPayment.html"
 }

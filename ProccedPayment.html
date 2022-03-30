@@ -7,6 +7,7 @@
   <title>Modal</title>
   <link href="styles.css" rel="stylesheet">
   <link rel="stylesheet" href="./UPI.css">
+  <link rel="stylesheet" href="./navbar.css">
   <script defer src="./PaymentScript.js"></script>
   <style>
 .procedtopayment{
@@ -16,7 +17,8 @@
 
   </style>
 </head>
-<body> <h6>
+<body> 
+  <div id="navbarinBody"></div>
   <button data-modal-target="#modal" id="paybutton" class="procedtopayment"><span>PAY VIA UPI</span>
     
     <img id="payimglogo" src="https://cdn.gokwik.co/v4/images/upi-icons.svg" alt=""/>
@@ -35,7 +37,7 @@
       <div class="title"><img id="popimagelogo" src="https://cdn.gokwik.co/merchant/1nwn0k1szfl0ic3qxl/logo1646758604488.png" alt=""> </div>
       <button data-close-button class="close-button">&times;</button>
     </div>
-    <h2>Open any UPI App & scan QR Code to pay</h2>
+    <p class="ptag">Open any UPI App & scan QR Code to pay</p>
     <div class="modal-body">
       
   <div id="upiDeatail">
@@ -61,9 +63,9 @@
     <hr > 
 
 
-    <h2>You will get a payment link on</h2>
+    <p class="ptag">You will get a payment link on</p>
     <div id="sendLink">
-      <span><h2>+91 - 8000000008</h2></span>
+      <span><p class="ptag">+91 - 8000000008</p></span>
       
         <button class="procedtopayment">Get Link</button>
     </div>
@@ -71,4 +73,14 @@
   </div>
   <div id="overlay"></div>
 </body>
+
+<script type="module">
+  import navbar from "./components/navbar.js";
+      // console.log(navbar)
+      let header=document.querySelector("#navbarinBody")
+  header.innerHTML=navbar();
+  </script>
+
+<script src="./Script.js">
+  </script>
 </html>
