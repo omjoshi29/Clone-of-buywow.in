@@ -391,3 +391,14 @@ margin-top:20px;
 color:#fff;
 border-radius: 5px;
 }
+#appendedCart{
+    height:400px;
+    width:70%;
+    overflow:scroll;
+    margin-top: 60px;
+}
+#div{
+    display:flex;
+    height:100px;
+    width:100%;
+}

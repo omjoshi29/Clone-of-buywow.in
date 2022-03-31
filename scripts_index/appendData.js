@@ -1,3 +1,6 @@
+
+let cartArr= JSON.parse(localStorage.getItem("cartArr")) || [];
+
 const append= (info,parent) =>{
     parent.innerHTML="";
  
@@ -7,14 +10,15 @@ const append= (info,parent) =>{
      div.setAttribute("id","div");
  
      let image= document.createElement("img");
-     image.src= ele.img;
+     image.src= ele.image;
      image.setAttribute("id","image")
  
      let name= document.createElement("p");
-     name.innerText= ele.title;
+     name.innerText= ele.name;
+     name.setAttribute("id","det")
  
      let price= document.createElement("p");
-     price.innerText= ele.price;
+     price.innerText= "₹"+ ele.price;
  
     let random= Math.floor(Math.random()*3000)+1000;
 
@@ -34,6 +38,9 @@ const append= (info,parent) =>{
     let btn= document.createElement("button");
     btn.innerText= "Add To Cart";
     btn.setAttribute("id","cartbtn")
+    btn.addEventListener("click",()=>{
+        goToCart(ele);
+    })
 
     div.append(image,name,price,keep,btn);
  
@@ -41,5 +48,15 @@ const append= (info,parent) =>{
  
     })
  }
+
+
+ const goToCart= (ele)=>{
+      cartArr.push(ele);
+      localStorage.setItem("cartArr",JSON.stringify(cartArr));
+ }
+
+
+
+
  
  export default append;

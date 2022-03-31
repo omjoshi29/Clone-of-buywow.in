@@ -144,51 +144,6 @@
     </div>
 </body>
 </html>
-<script type="module">
+<script type="module" src="./payment.js">
     
-    let diffForm= document.querySelector("#diffForm");
-
-    import add from "./components_payment/add.js";
-
- document.querySelector("#method2").addEventListener("click",()=>{
-     clicked();
- });
-
- const clicked= ()=>{
-     diffForm.innerHTML= add();
- }
- document.querySelector("#method1").addEventListener("click",()=>{
-     clicked2();
- });
-
- const clicked2= ()=>{
-     diffForm.innerHTML= null;
- }
-
-
-document.querySelector("#apply").addEventListener("click",()=>{
-    discount();
-})
-
-let val= document.querySelector("#finalAmount").innerText;
-
-const discount = ()=>{
-   
-    let coupon= document.querySelector("#voucher").value;
-   
-    if(coupon == "wow30"){
-      
-        let new_val = Math.ceil(val *30/100);
-        console.log(new_val)
-        document.querySelector("#finalAmount").innerText= val - new_val;
-    }
-}
-
-
-
-
-
-
-
-
 </script>
