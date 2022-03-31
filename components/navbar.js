@@ -207,7 +207,12 @@ const navbar=()=>
 
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">ADD to CART</a>
+  <h1 id="h1cart">Your Cart</h1>
+  <div id="emptycart"></div>
+  <div id="cartdiv"></div>
+  <div id="total">
+      <p id="grandtotal"></p>
+  </div>
   
 </div>
 
