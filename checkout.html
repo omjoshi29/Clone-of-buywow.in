@@ -5,26 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkOut</title>
+    <link rel="stylesheet" href="./PaymentStyle/checkout.css">
 </head>
+
 <body>
-   <div id="Show"></div>
+
+
+   <div id="Show">
+
+</div>
+     
+<div class="mapouter"><div class="gmap_canvas">
+
+
+    <iframe width="600" height="500" id="gmap_canvas" 
+    
+    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+</iframe>
+<a href="https://www.whatismyip-address.com/divi-discount/">
+
+</a><br>
+<style>.mapouter{position:relative;
+    text-align:right;
+    height:400px;width:600px;
+    margin-top: 50px;
+    margin-left: 2%;}</style><a href="https://www.embedgooglemap.net">
+    embedded map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:800px;}</style></div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
 </body>
 
-<Script>
+<script>
+
 
 var Addressarr=JSON.parse(localStorage.getItem("Address"))||[];
+const sampr=Addressarr[Addressarr.length-1]
+console.log(sampr)
+var showa=document.querySelector("#Show")
+     showa.innerHTML=null;
 
-Addressarr.map(function(ele)
-{
-    const showa=document.querySelector("#Show")
-    showa.innerHTML=null;
-    var showNum=document.createElement("h2");
+    
+    showa.innerHTML=`    <P>ORDER No : 100${sampr.randomorder}</P>
+    <p class="contentdark">Thnak YOU ${sampr.name}!</p>
 
-    showNum.innerText=ele.name+" "+ele.number
-    var showAdd=document.createElement("p");
-    showAdd=ele.email+" "+ele.street+" "+ele.City+" "+ele.State+ele.zip
-   
-    showa.append(showNum,showAdd)
-})
-</Script>
+    <div id="confirmcontent">
+                <p class="contentdark">order is confirmed</p> 
+                <p>You’ll receive an email and text when your order is ready</p>
+    </div>
+    <br>
+    <div id="confirmcontent">
+        <p class="contentdark">order updates</p> 
+        <p>You’ll get shipping and delivary updates by email and text</p>
+
+</div>
+<br><br>
+<div id="shippingdiv">
+<div id="shippingAdd">
+    <p class="contentdark">custemur information</p> 
+    <h5 class="contentdark">contact information</h5> 
+    <p>${sampr.email}</p>
+    <h5 class="contentdark">Shipping Address</h5> 
+    <p>${sampr.name}</p>
+    <p>${sampr.street}</p>
+    <p>${sampr.City}</p>
+    <p>${sampr.State}${sampr.zip}</p>
+    <p>${sampr.number}</p>
+</div>
+<div id="billadd">
+    <h5 class="contentdark">Bill Address</h5> 
+    <p>${sampr.name}</p>
+    <p>${sampr.street}</p>
+    <p>${sampr.City}</p>
+    <p>${sampr.State}${sampr.zip}</p>
+    <p>${sampr.number}</p>
+</div>
+
+   </div>`
+
+
+
+
+var ifr=document.querySelector("#gmap_canvas")
+ifr.src=`https://maps.google.com/maps?q=${sampr.City}t=&z=13&ie=AIzaSyCDea2s5sDe7kF3mcJYrdZfY4E93E_yHIw=&output=embed`
+
+
+
+</script>
+
+
 </html>

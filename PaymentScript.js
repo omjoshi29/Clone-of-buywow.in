@@ -48,6 +48,7 @@ function func(e)
   let State=document.querySelector("#inputState").value;
   let zip=document.querySelector("#inputZip").value;
   let number=document.querySelector("#number").value;
+  var randomorder=Math.ceil(Math.random() *(100000*10));
   var Addressarr=JSON.parse(localStorage.getItem("Address"))||[];
   var obj={
     
@@ -58,10 +59,14 @@ function func(e)
     State,
     zip,
     number,
+    randomorder
   }
+  console.log(obj)
   Addressarr.push(obj)
 
   localStorage.setItem("Address",JSON.stringify(Addressarr))
   window.location.href="./ProccedPayment.html"
 }
+
+
 
