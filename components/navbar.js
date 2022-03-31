@@ -187,7 +187,7 @@ const navbar=()=>
               <div>
                   <button class="openbtn" onclick="openNav1()"><img class="login_bag"  src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"/></button>  
 
-                  <!-- <a href="signin.html" > <img class="login_bag" src=""/></a> -->
+                 
               </div>
               <div>
                   <button class="openbtn" onclick="openNav()"><img class="login_bag"  src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-add-to-cart-icon-png-image_5060869.jpg"/></button>  
@@ -214,8 +214,8 @@ const navbar=()=>
 
 <div id="mySidepanel1" class="sidepanel1">
   <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">×</a>
-  <a href="./login.html" id="">Log in</a>
-  <a href="./signup.html">Register</a>
+  <a href="../login.html" id="">Log in</a>
+  <a href="../signup.html">Register</a>
   <a href="#">View Cart</a>
   
 </div>
