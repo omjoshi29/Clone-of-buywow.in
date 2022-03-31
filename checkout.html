@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkOut</title>
+</head>
+<body>
+   <div id="Show"></div>
+</body>
+
+<Script>
+
+var Addressarr=JSON.parse(localStorage.getItem("Address"))||[];
+
+Addressarr.map(function(ele)
+{
+    const showa=document.querySelector("#Show")
+    showa.innerHTML=null;
+    var showNum=document.createElement("h2");
+
+    showNum.innerText=ele.name+" "+ele.number
+    var showAdd=document.createElement("p");
+    showAdd=ele.email+" "+ele.street+" "+ele.City+" "+ele.State+ele.zip
+   
+    showa.append(showNum,showAdd)
+})
+</Script>
+</html>

@@ -10,10 +10,7 @@
   <link rel="stylesheet" href="./navbar.css">
   <script defer src="./PaymentScript.js"></script>
   <style>
-.procedtopayment{
-  margin-left: 40%;
-  width: 250px;
-}
+
 
   </style>
 </head>
@@ -56,7 +53,7 @@
   
   </div>
         
-
+ 
  
      
     </div>
@@ -67,10 +64,12 @@
     <div id="sendLink">
       <span><p class="ptag">+91 - 8000000008</p></span>
       
-        <button class="procedtopayment">Get Link</button>
+        <button class="Checkout">Get Link</button>
+        <button id="checkout" class="Checkout" >Checkout</button>
     </div>
    
   </div>
+ 
   <div id="overlay"></div>
 </body>
 
@@ -82,5 +81,15 @@
   </script>
 
 <script src="./Script.js">
+  </script>
+  <script>
+    
+
+document.querySelector("#checkout").addEventListener("click",checkoutfunction);
+
+function checkoutfunction()
+{
+  window.location.href="./checkout.html"
+}
   </script>
 </html>

@@ -48,7 +48,7 @@ function func(e)
   let State=document.querySelector("#inputState").value;
   let zip=document.querySelector("#inputZip").value;
   let number=document.querySelector("#number").value;
- var Addressarr=[];
+  var Addressarr=JSON.parse(localStorage.getItem("Address"))||[];
   var obj={
     
     name:name,
@@ -64,3 +64,4 @@ function func(e)
   localStorage.setItem("Address",JSON.stringify(Addressarr))
   window.location.href="./ProccedPayment.html"
 }
+
