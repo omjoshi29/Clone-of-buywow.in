@@ -83,17 +83,17 @@ function serach() {
 var cartArr = JSON.parse(localStorage.getItem("cartArr"));
 console.log(cartArr);
 
-var cartdiv = document.getElementById("cartdiv");
-cartdiv.innerText="hi"
-var emptycart = document.getElementById("emptycart");
+var cartdiv1 = document.getElementById("cartdiv1");
+ cartdiv1.innerText=""
+var emptycart1 = document.getElementById("emptycart1");
 
-var grandtotal = document.getElementById("grandtotal");
+var grandtotal1 = document.getElementById("grandtotal1");
 
 var sum = 0;
 
 function appendProduct(cartArr) {
     if (cartArr.length > 0) {
-        cartdiv.innerHTML = null;
+        cartdiv1.innerHTML = null;
         cartArr.forEach(function (elem, index) {
             let image = document.createElement("img");
             image.src = elem.image;
@@ -140,7 +140,7 @@ function appendProduct(cartArr) {
                     quantity--;
                     elem.quant = quantity;
                     localStorage.setItem("cartArr", JSON.stringify(cartArr));
-                    input.value = elem.quant;
+                  input.value = elem.quant;
                     location.reload();
                 }
             });
@@ -149,7 +149,7 @@ function appendProduct(cartArr) {
                 quantity++;
                 elem.quant = quantity;
                 localStorage.setItem("cartArr", JSON.stringify(cartArr));
-                input.value = elem.quant;
+              input.value = elem.quant;
                 location.reload();
             });
 
@@ -159,7 +159,7 @@ function appendProduct(cartArr) {
             upprice.innerText = "₹" + (+elem.price) * elem.quant;
 
             sum += (+elem.price) * elem.quant;
-            grandtotal.innerText = "GRAND TOTAL: ₹" + sum;
+            grandtotal1.innerText = "GRAND TOTAL: ₹" + sum;
 
             let deletediv = document.createElement("div");
             deletediv.setAttribute("id", "deletediv");
@@ -177,13 +177,13 @@ function appendProduct(cartArr) {
 
             let box = document.createElement("div");
             box.append(image, name, price, control, upprice, deletediv);
-            cartdiv.append(box);
+            cartdiv1.append(box);
         });
     }
     else if (cartArr.length === 0) {
-        emptycart.innerHTML = null;
+        emptycart1.innerHTML = null;
 
-        document.getElementById("h1cart").style.display = "none";
+        document.getElementById("h1cart1").style.display = "none";
 
         let p1 = document.createElement("p");
         p1.innerText = "Your cart is empty!";
@@ -194,7 +194,7 @@ function appendProduct(cartArr) {
         let btn = document.createElement("button");
         btn.innerText = "Check out our offerings!";
 
-        emptycart.append(p1, p2, btn);
+        emptycart1.append(p1, p2, btn);
     }
 }
 

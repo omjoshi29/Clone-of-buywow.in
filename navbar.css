@@ -262,6 +262,7 @@ li {
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
       }
       
       .sidepanel a {

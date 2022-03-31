@@ -207,11 +207,14 @@ const navbar=()=>
 
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <h1 id="h1cart">Your Cart</h1>
-  <div id="emptycart"></div>
-  <div id="cartdiv"></div>
-  <div id="total">
-      <p id="grandtotal"></p>
+  <h1 id="h1cart1">Your Cart</h1>
+  <div id="emptycart1"></div>
+  <div id="cartdiv1"></div>
+  <div id="total1">
+      <p id="grandtotal1"></p>
+  </div>
+  <div id="viewcart1">
+      <a href="./cart.html">View Cart</a>
   </div>
   
 </div>
@@ -234,7 +237,7 @@ const navbar=()=>
 
  <diV id="showdsearchata"></div>
   
-</div>`
+</div>`;
 
 }
 export default navbar
