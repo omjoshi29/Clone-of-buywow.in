@@ -180,17 +180,17 @@ const navbar= ()=>{
 <div>
               <div id="serchbox" >
             <!-- <input type="text" placeholder="search by fregamens products" class="input"> -->
-            <button class="openbtn" onclick="serach()"><img class="login_bag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"/></button>  
+            <button class="openbtn" id="openbtn" onclick="serach()"><img class="login_bag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"/></button>  
 
                   
               </div>
               <div>
-                  <button class="openbtn" onclick="openNav1()"><img class="login_bag"  src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"/></button>  
+                  <button class="openbtn" id="openbtn1" onclick="openNav1()"><img class="login_bag"  src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"/></button>  
 
                   <!-- <a href="signin.html" > <img class="login_bag" src=""/></a> -->
               </div>
               <div>
-                  <button class="openbtn" onclick="openNav()"><img class="login_bag"  src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-add-to-cart-icon-png-image_5060869.jpg"/></button>  
+                  <button class="openbtn" id="openbtn2" onclick="openNav()"><img class="login_bag"  src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-add-to-cart-icon-png-image_5060869.jpg"/></button>  
               </div>
           </div>
              
@@ -226,7 +226,7 @@ const navbar= ()=>{
   <a href="javascript:void(0)" class="closebtnSearch" onclick="closeNavSeach()">×</a>
  <h2>Find anything you need</h2>
  <input type="text" id="searcch_Any_Produ" placeholder="Search Products" oninput="debounce(main,2000)">
-  
+  <div id="show"></div>
 </div>`
 
 }
