@@ -1,8 +1,9 @@
-var bathProducts=[{"name":"Hair Vanish Sensitive No Parabens And Moneral Oil -100Ml","price":"399","ratings":"169 Reviews","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Sensitive-1_845b49a6-0ac7-4781-9a61-1b688f44bae0_520x.jpg?v=1633325689"},
- {"name":"Hair Vanish For Women No Parabens And Moneral Oil -100Ml","price":"399","ratings":"24 Reviews","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Women-1_7e162f7d-aadb-4903-b9c5-41850fcce4b9_520x.jpg?v=1633325633"},
- {"name":"Hair Vanish For Men No Parabens And Moneral Oil -100Ml","price":"399","ratings":"8Reviews","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Men-1_cfb19fdf-9749-4766-a53e-12ea64566b8a_520x.jpg?v=1633325742"}];
+var bathProducts=[{"name":"Hair Vanish Sensitive No Parabens And Moneral Oil -100Ml","price":"399","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Sensitive-1_845b49a6-0ac7-4781-9a61-1b688f44bae0_520x.jpg?v=1633325689"},
+ {"name":"Hair Vanish For Women No Parabens And Moneral Oil -100Ml","price":"399","ratings":4.6,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Women-1_7e162f7d-aadb-4903-b9c5-41850fcce4b9_520x.jpg?v=1633325633"},
+ {"name":"Hair Vanish For Men No Parabens And Moneral Oil -100Ml","price":"399","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Hair-Vanish-Men-1_cfb19fdf-9749-4766-a53e-12ea64566b8a_520x.jpg?v=1633325742"}];
 
     var bathDiv = document.getElementById("bathDiv");
+    var cartArr = JSON.parse(localStorage.getItem('cartArr')) || [];
 
     function appendProduct(bathProducts) {
         bathDiv.innerHTML = null;
@@ -16,16 +17,37 @@ var bathProducts=[{"name":"Hair Vanish Sensitive No Parabens And Moneral Oil -10
             let price = document.createElement("p");
             price.innerText = "₹" + elem.price;
 
-            // let ratings = document.createElement("p");
-            // ratings.innerText = elem.ratings;
-
+            let ratings = document.createElement("p");
+            ratings.innerText = elem.ratings;
+        
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", "Stars");
+            div1.style = `--rating: ${elem.ratings};`;
+        
+            var ratingdiv = document.createElement("div");
+            ratingdiv.setAttribute("id", "ratingdiv");
+            ratingdiv.append(ratings, div1);
+        
             let cartbtn = document.createElement("button");
             cartbtn.innerText = "Add to cart";
             cartbtn.setAttribute("id", "cartbtn");
-
+        
+            cartbtn.addEventListener("click", function (event) {
+              event.preventDefault();
+              cartArr.push(elem);
+              localStorage.setItem("cartArr", JSON.stringify(cartArr));
+              console.log(cartArr);
+              alert("Product added to the cart!");
+            })
+        
             let box = document.createElement("div");
-            box.append(image, name, price,  cartbtn);
+            box.append(image, name, price, ratingdiv, cartbtn);
             bathDiv.append(box);
+        
+
+
+
+
         })
     }
     appendProduct(bathProducts);

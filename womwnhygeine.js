@@ -6,8 +6,9 @@ import footer from'./components/footer.js';
     let header=document.querySelector("#navbarinBody")
 header.innerHTML=navbar();
 var bathProducts = [
-    {"name":"Freedom Reusable Menstrual Cup and Wash Pre Childbirth - Small (Under 30 Years)","price":"599","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-M-2_520x.jpg?v=1633670121"},{"name":" Freedom Cleansing Foaming Wash, Lactic Acid and Tea Tree Oil - 120 ml, Lactic Acid and Tea Tree Oil - 120 ml","price":"399","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-Wash-2_375x.jpg?v=1634026623"},{"name":" Freedom Reusable Menstrual Cup and Wash Post Childbirth - Large (Above 30 Years)","price":"399","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-L-1_375x.jpg?v=1633670250"}]
+    {"name":"Freedom Reusable Menstrual Cup and Wash Pre Childbirth - Small (Under 30 Years)","price":"599","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-M-2_520x.jpg?v=1633670121"},{"name":" Freedom Cleansing Foaming Wash, Lactic Acid and Tea Tree Oil - 120 ml, Lactic Acid and Tea Tree Oil - 120 ml","price":"399","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-Wash-2_375x.jpg?v=1634026623"},{"name":" Freedom Reusable Menstrual Cup and Wash Post Childbirth - Large (Above 30 Years)","price":"399","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-L-1_375x.jpg?v=1633670250"}]
     var bathDiv = document.getElementById("bathDiv");
+    var cartArr = JSON.parse(localStorage.getItem('cartArr')) || [];
 
 function appendProduct(bathProducts) {
     bathDiv.innerHTML = null;
@@ -21,16 +22,38 @@ function appendProduct(bathProducts) {
         let price = document.createElement("p");
         price.innerText = "₹" + elem.price;
 
-        // let ratings = document.createElement("p");
-        // ratings.innerText = elem.ratings;
-
+  
+        let ratings = document.createElement("p");
+        ratings.innerText = elem.ratings;
+    
+        var div1 = document.createElement("div");
+        div1.setAttribute("class", "Stars");
+        div1.style = `--rating: ${elem.ratings};`;
+    
+        var ratingdiv = document.createElement("div");
+        ratingdiv.setAttribute("id", "ratingdiv");
+        ratingdiv.append(ratings, div1);
+    
         let cartbtn = document.createElement("button");
         cartbtn.innerText = "Add to cart";
         cartbtn.setAttribute("id", "cartbtn");
-
+    
+        cartbtn.addEventListener("click", function (event) {
+          event.preventDefault();
+          cartArr.push(elem);
+          localStorage.setItem("cartArr", JSON.stringify(cartArr));
+          console.log(cartArr);
+          alert("Product added to the cart!");
+        })
+    
         let box = document.createElement("div");
-        box.append(image, name, price,  cartbtn);
+        box.append(image, name, price, ratingdiv, cartbtn);
         bathDiv.append(box);
+    
+
+
+
+
     })
 }
 appendProduct(bathProducts);
