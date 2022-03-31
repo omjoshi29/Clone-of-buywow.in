@@ -181,10 +181,12 @@ object-fit: cover;
     width:100%;
 
 }
+
 #div:hover #cartbtn{
 display:block;
 transition: display 1s;
 }
+
 #rating{
 font-size: 12px;
 margin-top: 5px;
