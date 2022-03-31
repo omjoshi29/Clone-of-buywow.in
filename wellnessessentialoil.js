@@ -1,5 +1,10 @@
 import footer from'./components/footer.js';
 document.getElementById("footer").innerHTML=footer();
+
+import navbar from "./components/navbar.js";
+// console.log(navbar)
+let header=document.querySelector("#navbarinBody")
+header.innerHTML=navbar();
 var bathProducts=[{"name":"Peppermint Essential Oil -15Ml","price":"499","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/pepperming_520x.jpg?v=1595019587"},{"name":"Rose Otto Essential Oil -15Ml","price":"499","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Roseotto_520x.jpg?v=1595019588"},{"name":"Bergamot Essential Oil -15Ml","price":"499","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/bergamot_520x.jpg?v=1595019582"},{"name":"Jasmine Essential Oil -15Ml","price":"499","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Jasmine_520x.jpg?v=1595019594"}]
 
 var bathDiv = document.getElementById("bathDiv");

@@ -1,5 +1,10 @@
 import footer from'./components/footer.js';
     document.getElementById("footer").innerHTML=footer();
+
+    import navbar from "./components/navbar.js";
+    // console.log(navbar)
+    let header=document.querySelector("#navbarinBody")
+header.innerHTML=navbar();
 var bathProducts = [
     {"name":"Freedom Reusable Menstrual Cup and Wash Pre Childbirth - Small (Under 30 Years)","price":"599","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-M-2_520x.jpg?v=1633670121"},{"name":" Freedom Cleansing Foaming Wash, Lactic Acid and Tea Tree Oil - 120 ml, Lactic Acid and Tea Tree Oil - 120 ml","price":"399","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-Wash-2_375x.jpg?v=1634026623"},{"name":" Freedom Reusable Menstrual Cup and Wash Post Childbirth - Large (Above 30 Years)","price":"399","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Freedom-L-1_375x.jpg?v=1633670250"}]
     var bathDiv = document.getElementById("bathDiv");

@@ -74,3 +74,7 @@ var bathProducts=[{"name":"Hair Vanish Sensitive No Parabens And Moneral Oil -10
 // 
 import footer from'./components/footer.js';
     document.getElementById("footer").innerHTML=footer();
+    import navbar from "./components/navbar.js";
+// console.log(navbar)
+let header=document.querySelector("#navbarinBody")
+header.innerHTML=navbar();
