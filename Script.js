@@ -2,7 +2,7 @@ function serach() {
     document.getElementById("mySearch").style.width = "100%";
   }
   function openNav() {
-    document.getElementById("mySidepanel").style.width = "700px";
+    document.getElementById("mySidepanel").style.width = "550px";
   }
   function openNav1() {
     document.getElementById("mySidepanel1").style.width = "200px";

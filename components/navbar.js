@@ -3,17 +3,17 @@ const navbar=()=>
     return `<a href="" class="acho">
          
     <div  id="navpromo" > 
-      <div id="promo">
+      
          <p class="promo-title">
-            New! 
-            <span class="embelished" >BUY 1 GET 1 FREE - ENDING SOON </span>
-          <span>(In Select Store)</span>
+           
+           BUY 1 GET 1 FREE - ENDING SOON
+       
          
-          <span class="closing">
-              <u>Learn More</u> 
-          </span>
+         
+              
+          
           </p>  
-      </div>
+   
     
   </div>
 </a>
