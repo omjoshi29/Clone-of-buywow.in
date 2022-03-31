@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Butter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./bathprod.css">
+</head>
+
+<body>
+    <div id="bathHeader">
+        <h1>Body Butter</h1>
+        <img src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885"
+            alt="">
+    </div>
+
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="bathDiv"></div>
+</body>
+
+</html>
+<script type="module">
+    var bathProducts = [
+        { name: "Himalayan Rose Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "250", ratings: "4.9", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Rose-Body-Butter-1_1280x.jpg?v=1632718502" }, { name: "Stretch Care Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.8", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Stretchcare1_1280x.jpg?v=1632901765" }, { name: "Arabica Coffee and Cocoa Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.8", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/ArabicaBodyButter1_1280x.jpg?v=1632295691" }, { name: "Vitamin E Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.7", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/VitaminEbutter1_1280x.jpg?v=1632901112" }, { name: "Raw African Shea Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.9", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Shea-butter-1_1280x.jpg?v=1634015568" }, { name: "Amazon Rainforest Collection Body Butter with Tucuma and Cupuacu Butter - No Paraben, Mineral Oil, Silicones and Color - 200 ml", price: "140", ratings: "4.7", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Amz_Bodybutter_1280x.jpg?v=1595019704" }, { name: "Citrus Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "5.0", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Citrusbutter1_1280x.jpg?v=1632901649" }, { name: "Raw Argan Oil Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.5", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Argan-Oil-butter-1_1280x.jpg?v=1633670608" }, { name: "Nargis Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.3", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Nargisbutter1_1280x.jpg?v=1632900889" }, { name: "Rich Olive Body Butter - No Parabens, Silicones, Mineral Oil & Color - 200 ml", price: "180", ratings: "4.5", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Olive-Oil-butter-1_1280x.jpg?v=1633669679" }
+    ];
+
+    var bathDiv = document.getElementById("bathDiv");
+
+    import appendProduct from './bathprod.js';
+    appendProduct(bathProducts);
+
+    document.querySelector("#sorter").addEventListener("click", sortByPrice);
+    function sortByPrice() {
+        bathProducts.map(function (elem) {
+            var sorting = document.querySelector("#sorter").value;
+            console.log(sorting);
+            if (sorting == "l2h") {
+                bathProducts.sort(function (a, b) { return a.price - b.price })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "h2l") {
+                bathProducts.sort(function (a, b) { return b.price - a.price })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "rl2h") {
+                bathProducts.sort(function (a, b) { return a.ratings - b.ratings })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "rh2l") {
+                bathProducts.sort(function (a, b) { return b.ratings - a.ratings })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "a2z") {
+                function SortArray(x, y) {
+                    if (x.name < y.name) { return -1; }
+                    if (x.name > y.name) { return 1; }
+                    return 0;
+                }
+                var s = bathProducts.sort(SortArray)
+                appendProduct(s)
+            }
+            else if (sorting == "z2a") {
+                function SortArray(x, y) {
+                    if (x.name > y.name) { return -1; }
+                    if (x.name < y.name) { return 1; }
+                    return 0;
+                }
+                var s = bathProducts.sort(SortArray)
+                appendProduct(s)
+            }
+        })
+    }
+</script>
