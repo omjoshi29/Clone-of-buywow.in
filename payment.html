@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./payment_css/payment.css">
+</head>
+<body>
+    <div id="contain">
+        <div id="info">
+               <img id="logo" src="https://cdn.shopify.com/s/files/1/1375/4957/files/WOW_logo-02-02-01_5f70367a-c63c-479d-9ebe-21f1eebf6189.png?41990" alt="">
+               <div id="path">
+                <a href="">cart</a> > <a href="">Information</a> > <a href="" id="a">Payment</a> 
+               </div>
+
+
+               <div id="item"></div>
+
+
+                    <div id="personal">
+
+                                <div id="row1">
+                                    <p>svv</p>
+                                    <p>vsgd</p>
+                                    <p>Change</p>
+                                </div>
+
+                        <hr>
+
+                                <div id="row2">
+                                    <p>svv</p>
+                                    <p>vsgd</p>
+                                    <p>Change</p>
+                                </div>
+
+                    </div>
+
+                  <h2 id="h2">Payment</h2>
+                  <p id="p2">All transaction are secure and encrypted</p>
+              
+               <div id="payment">
+                         
+                         <div id="firstRow">
+                                    <input type="radio" id="html" name="fav_language" value="HTML">
+                                    <label for="html">     
+                                    </label><br>
+                                    <img  id="razo" src="https://cdn.shopify.com/s/files/applications/e273f27d4c4fa65fc8e2af05e552f04e.png?height=24&1637057371" alt="">
+                                    <img  id="opt" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSajPFEXd01_3dM6rO0A9iQXiCSkBS6Wnk-LDQo8crEc03VF0xJ" alt="">
+                          </div>
+
+                             <hr>
+                            <div id="extra">
+                                        <img id="box" src="Screenshot (18).png" alt="">
+                                        <p id="p3">After clicking “Complete order”, you will be redirected to Online Payment (Cards, UPI, NetBanking, CRED Pay (Extra 10% OFF), Wallets) to complete your purchase securely.</p>
+                             </div>
+                                    <hr>
+                            
+                            <div id="secRow">
+                                <input type="radio" id="html2" name="fav_language" value="HTML">
+                                <label for="html">
+                                    <h2 id="cash">Cash on Delivery</h2>
+                            </div>
+                       
+               </div>
+
+                      <h2 id="h2">Billing Address</h2>
+                      <p id="p2">Select the address that matches your card or payment method.</p>
+                      
+
+                      <div id="item2">
+                           <div id="line1">
+                              <input type="radio" id="method1" name="fav_language" value="HTML">
+                             <h2 id="same">Same as shipping address</h2>
+                           </div>
+                  <hr>
+                           <div id="line2">
+                            <input type="radio" id="method2" name="fav_language" value="HTML">
+                           <h2 id="diff">Use a different billing address</h2>
+                         </div>
+                            <div id="diffForm"></div>
+                     </div>
+
+            <div id="return">
+             <a href="" id="custom">Return to customer information</a>
+               <button id="btn">Complete order</button>
+            </div>
+         
+            <hr id="hr1">
+
+            <div id="policy">
+                    <a>Refund policy</a>
+                    <a>Privacy policy</a>
+                    <a>Terms of service</a>
+            </div>
+
+        </div>
+
+
+                    <!-- right Part html  -->
+
+        <div id="offers">
+            
+            <div id="appendedCart">
+
+            </div>
+
+           <hr id="hor">
+<div id="coupon">
+    <input type="text" name="" id="voucher" placeholder="Apply voucher code here">
+    <button id="apply">Apply</button>
+</div>
+    
+<hr id="hor1">
+
+<div id="subtotal">
+    <p id="sub">Subtotal</p>
+    <h2 id="total">355</h2>
+</div>
+
+<div id="shipping">
+    <p id="ship">Shipping</p>
+    <h2 id="total2">525</h2>
+</div>
+
+<hr id="hor1">
+        
+<div id="grandTotal">
+         <div id="grand">
+            <h2 id="h2_t">Total</h2>
+        <p id="inc">including in Taxes</p>
+         </div>
+
+         <div id="final">
+             <p id="P_t">INR</p>
+             <h2 id="finalAmount">54222</h2>
+         </div>
+
+</div>
+
+<button id="tc">You will get Rs.172 cashback after delivery.  T&C</button>
+        </div>
+    </div>
+</body>
+</html>
+<script type="module">
+    
+    let diffForm= document.querySelector("#diffForm");
+
+    import add from "./components_payment/add.js";
+
+ document.querySelector("#method2").addEventListener("click",()=>{
+     clicked();
+ });
+
+ const clicked= ()=>{
+     diffForm.innerHTML= add();
+ }
+ document.querySelector("#method1").addEventListener("click",()=>{
+     clicked2();
+ });
+
+ const clicked2= ()=>{
+     diffForm.innerHTML= null;
+ }
+
+
+document.querySelector("#apply").addEventListener("click",()=>{
+    discount();
+})
+
+let val= document.querySelector("#finalAmount").innerText;
+
+const discount = ()=>{
+   
+    let coupon= document.querySelector("#voucher").value;
+   
+    if(coupon == "wow30"){
+      
+        let new_val = Math.ceil(val *30/100);
+        console.log(new_val)
+        document.querySelector("#finalAmount").innerText= val - new_val;
+    }
+}
+
+
+
+
+
+
+
+
+</script>
