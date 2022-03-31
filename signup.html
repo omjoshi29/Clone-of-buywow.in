@@ -39,8 +39,10 @@ input {
   margin-top: 400px;
 }
     </style>
+    <link rel="stylesheet" href="./navbar.css">
   </head>
   <body>
+    <div id="navbarinBody"></div>
     <h1 style="text-align: center;">Create an account</h1>
 
     <div class="one">
@@ -98,3 +100,15 @@ input {
   //     });
   // }
 </script>
+</script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+      // console.log(navbar)
+      let header=document.querySelector("#navbarinBody")
+  header.innerHTML=navbar();
+  </script>
+  
+  <script src="./Script.js">
+      
+  
+      </script>

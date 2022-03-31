@@ -38,8 +38,11 @@
    
 }
     </style>
+
+    <link rel="stylesheet" href="./navbar.css">
   </head>
   <body>
+    <div id="navbarinBody"></div>
     <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Sign in to your account</h1>
     <div class="two" style="margin-bottom: 100px;">
 
@@ -99,3 +102,14 @@
   
   // }
 </script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+      // console.log(navbar)
+      let header=document.querySelector("#navbarinBody")
+  header.innerHTML=navbar();
+  </script>
+  
+  <script src="./Script.js">
+      
+  
+      </script>

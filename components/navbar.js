@@ -214,8 +214,8 @@ const navbar=()=>
 
 <div id="mySidepanel1" class="sidepanel1">
   <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">×</a>
-  <a href="./signin.html" id="">Log in</a>
-  <a href="#">Register</a>
+  <a href="./login.html" id="">Log in</a>
+  <a href="./signup.html">Register</a>
   <a href="#">View Cart</a>
   
 </div>
