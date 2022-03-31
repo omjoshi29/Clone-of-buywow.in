@@ -62,5 +62,5 @@ function func(e)
   Addressarr.push(obj)
 
   localStorage.setItem("Address",JSON.stringify(Addressarr))
-  // window.location.href="./ProccedPayment.html"
+  window.location.href="./ProccedPayment.html"
 }
