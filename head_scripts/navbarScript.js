@@ -826,20 +826,21 @@ const searchProduct= () =>{
     // console.log(filterData);
     return filterData;   
  }
-let i= 1;
+ 
+
  const appendProducts= (info) =>{
   // show.innerHTML="";
  
   document.querySelector("#show").innerHTML= "";
-
+  let i= 1;
 
 console.log(info)
-  info.map((ele)=>{
-    if(i == 5){
-      return;
+   info.map((ele)=>{
+    
+    if(i == 6){
+        return;
     }
    
-  
           let div= document.createElement("div");
           div.setAttribute("id","div2");
 
@@ -876,7 +877,7 @@ console.log(info)
         console.log(div)
           document.querySelector("#show").append(div);
  i++;
-  })
+  });
 }
 
  
