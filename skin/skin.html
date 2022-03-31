@@ -9,94 +9,9 @@
 
     <link rel="stylesheet" href=".././navbar.css">
     <link rel="stylesheet" href=".././footer.css">
+    <link rel="stylesheet" href="./skin-style.css">
 
-    
-    <style>
-    
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        #sortDiv {
-            width: 80%;
-            margin: auto;
-            margin-top: 20px;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        #sorter {
-            padding: 10px;
-            border: none;
-            font-size: 16px;
-            font-weight: lighter;
-        }
-
-        #sorter>option {
-            padding: 10px;
-            border: none;
-            font-size: 16px;
-            font-weight: lighter;
-        }
-
-        #skinDiv {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(5, fit-content);
-            gap: 30px;
-            width: 80%;
-            margin: auto;
-            margin-top: 30px;
-        }
-
-        #skinDiv>div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        #skinDiv>div>img {
-            width: 100%;
-        }
-
-        #skinDiv>div>p {
-            margin-top: 0px;
-        }
-
-        #skinDiv>div>p:nth-child(2) {
-            margin-top: 30px;
-            font-weight: lighter;
-            text-decoration: none;
-            text-transform: capitalize;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        #skinDiv>div>p:nth-child(3) {
-            font-weight: 600;
-        }
-
-        #cartbtn {
-            padding: 10px;
-            background-color: black;
-            color: white;
-            font-size: 18px;
-            font-weight: lighter;
-            border: none;
-            cursor: pointer;
-            display: none;
-        }
-
-        #skinDiv>div:hover #cartbtn {
-            display: block;
-        }
-    </style>
-    
+  
 </head>
 <body>
     <!-- Header -->
@@ -122,21 +37,12 @@
     <div id="footer"></div>
 </body>
 </html>
-<script type="module">
-  import navbar from ".././components/navbar.js";
-      // console.log(navbar)
-  let header=document.querySelector("#navbarinBody")
-  header.innerHTML=navbar();
 
-      //  ---- Footer ----
-import footer from'../components/footer.js';
-    document.getElementById("footer").innerHTML=footer();
-</script>
+<!-- Main  -->
+<script type="module" src="./skin-main.js"></script>   
 
 
-
-<script>
-    
+<script>    
     
 const skinProducts =[
   {
@@ -476,75 +382,7 @@ const skinProducts =[
     image: "https://cdn.shopify.com/s/files/1/1375/4957/products/AA-serum-1_1280x.jpg?v=1634729695"
   }
 ];
-let skinDiv = document.getElementById("skinDiv");
 
-function appendProduct(skinProducts) {
-    skinDiv.innerHTML = null;
-    skinProducts.forEach(function (elem) {
-        let image = document.createElement("img");
-        image.src = elem.image;
-
-        let name = document.createElement("p");
-        name.innerText = elem.name;
-
-        let price = document.createElement("p");
-        price.innerText = "₹" + elem.price;
-
-        let ratings = document.createElement("p");
-        ratings.innerText = elem.ratings;
-
-        let cartbtn = document.createElement("button");
-        cartbtn.innerText = "Add to cart";
-        cartbtn.setAttribute("id", "cartbtn");
-
-        let box = document.createElement("div");
-        box.append(image, name, price, ratings, cartbtn);
-        skinDiv.append(box);
-    })
-}
-appendProduct(skinProducts);
-
-document.querySelector("#sorter").addEventListener("click", sortByPrice);
-function sortByPrice() {
-    skinProducts.map(function (elem) {
-        var sorting = document.querySelector("#sorter").value;
-        // console.log(sorting);
-        if (sorting == "l2h") {
-            skinProducts.sort(function (a, b) { return a.price - b.price })
-            appendProduct(skinProducts)
-        }
-        else if (sorting == "h2l") {
-            skinProducts.sort(function (a, b) { return b.price - a.price })
-            appendProduct(skinProducts)
-        }
-        else if (sorting == "rl2h") {
-            skinProducts.sort(function (a, b) { return a.ratings - b.ratings })
-            appendProduct(skinProducts)
-        }
-        else if (sorting == "rh2l") {
-            skinProducts.sort(function (a, b) { return b.ratings - a.ratings })
-            appendProduct(skinProducts)
-        }
-        else if (sorting == "a2z") {
-            function SortArray(x, y) {
-                if (x.name < y.name) { return -1; }
-                if (x.name > y.name) { return 1; }
-                return 0;
-            }
-            var s = skinProducts.sort(SortArray)
-            appendProduct(s)
-        }
-        else if (sorting == "z2a") {
-            function SortArray(x, y) {
-                if (x.name > y.name) { return -1; }
-                if (x.name < y.name) { return 1; }
-                return 0;
-            }
-            var s = skinProducts.sort(SortArray)
-            appendProduct(s)
-        }
-    })
-}
 
     
 </script>
