@@ -10,9 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style_bhagesh/main_css.css">
+    <link rel="stylesheet" href="../footer.css">
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../navbar.css">
+    <!-- <link rel="stylesheet" href="../"> -->
 </head>
 
 <body>
+    <div id="navbarinBody"></div>   
+
+
     <div id="topImgDiv">
         <h2>Aloe Vera</h2>
         <img id="topImg"src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885">
@@ -30,9 +40,21 @@
     </div>
 
     <div id="hairDiv" style="grid-template-columns: repeat(4, 22%);grid-template-rows: repeat(3, 450px);"></div>
+<div id="footer"></div>
+
 </body>
 
 </html>
+
 <script src="/collection_bhagesh/collection_script/alover.js">
 
 </script>
+<script type="module" src="../footer.js"></script>
+<script type="module">
+    import navbar from "../components/navbar.js";
+        // console.log(navbar)
+        let header=document.querySelector("#navbarinBody")
+    header.innerHTML=navbar();
+    </script>
+    
+    <script src="../Script.js"></script>
