@@ -54,13 +54,19 @@ p a {
 }
 
 #show{
-    margin-top: 5px;
-    height:inherit;
+    margin-top: 45px;
+    height:500px;
     width:100%;
     display:flex;
 }
-
-
+#div2{
+    height:400px;
+    width:350px;
+}
+#div2:hover #cartbtn{
+    display:block;
+    transition: display 1s;
+    }
 
 
 #mainnav {
