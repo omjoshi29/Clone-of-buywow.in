@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bathing Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./bathprod.css">
+</head>
+
+<body>
+    <div id="bathHeader">
+        <h1>Bathing Bar</h1>
+        <img src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885"
+            alt="">
+    </div>
+
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="bathDiv"></div>
+</body>
+
+</html>
+<script type="module">
+    var bathProducts = [
+        { name: "Ubtan Bathing Bar - 75g", price: "125", ratings: "5.0", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Ubtan-1_f20dd3ab-130c-4d58-b7b1-6bc2e7ebd023_1280x.jpg?v=1639386740" }, { name: "Brightening Vitamin C Bathing Bar - 75g", price: "125", ratings: "4.7", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Vit-C-1_615b7e8a-7bd9-4521-bae4-b344287cfa98_1280x.jpg?v=1639387237" }, { name: "Activated Bamboo Charcoal Bathing Bar - 75g", price: "125", ratings: "5.0", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Charcoal-1_62cdc7bf-db61-462c-a281-05d62867c65a_1280x.jpg?v=1639387501" }, { name: "Himalayan Rose Bathing Bar - 75g", price: "125", ratings: "4.0", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Rose-1_43aeb331-ef8b-4ffe-afe7-42a5285e16bf_1280x.jpg?v=1639386970" }, { name: "Aloe Vera Bathing Bar - 75g", price: "125", ratings: "4.8", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Aloe-1_8eea8666-2f49-4f43-b8ed-3bb4287f087f_1280x.jpg?v=1639387380" }, { name: "Coffee Bathing Bar - 75g", price: "125", ratings: "4.9", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Coffee-1_d4c34bc4-92ca-48cb-b293-12f657e63271_1280x.jpg?v=1640758994" }, { name: "Nargis Bathing Bar - 75g", price: "125", ratings: "4.5", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Nargis-1_09aae6bc-e669-4669-aa09-951469215049_1280x.jpg?v=1639386827" }, { name: "Coconut & Lemon Verbena Bathing Bar - 75g", price: "125", ratings: "4.3", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Coconut_Lemon-1_1280x.jpg?v=1639387156" }, { name: "Apple Cider Vinegar Bathing Bar - 75g", price: "125", ratings: "4.5", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/ACV-1_95743a55-6e45-4096-bb0f-29d9f736cd07_1280x.jpg?v=1639387317" }, { name: "Mango Butter Bathing Bar - 75g", price: "125", ratings: "4.3", image: "https://cdn.shopify.com/s/files/1/1375/4957/products/Mango-1_e231d1d6-203a-4b10-9cfc-f676cdb320df_1280x.jpg?v=1639386905" }
+    ];
+
+    var bathDiv = document.getElementById("bathDiv");
+
+    import appendProduct from './bathprod.js';
+    appendProduct(bathProducts);
+
+    document.querySelector("#sorter").addEventListener("click", sortByPrice);
+    function sortByPrice() {
+        bathProducts.map(function (elem) {
+            var sorting = document.querySelector("#sorter").value;
+            console.log(sorting);
+            if (sorting == "l2h") {
+                bathProducts.sort(function (a, b) { return a.price - b.price })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "h2l") {
+                bathProducts.sort(function (a, b) { return b.price - a.price })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "rl2h") {
+                bathProducts.sort(function (a, b) { return a.ratings - b.ratings })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "rh2l") {
+                bathProducts.sort(function (a, b) { return b.ratings - a.ratings })
+                appendProduct(bathProducts)
+            }
+            else if (sorting == "a2z") {
+                function SortArray(x, y) {
+                    if (x.name < y.name) { return -1; }
+                    if (x.name > y.name) { return 1; }
+                    return 0;
+                }
+                var s = bathProducts.sort(SortArray)
+                appendProduct(s)
+            }
+            else if (sorting == "z2a") {
+                function SortArray(x, y) {
+                    if (x.name > y.name) { return -1; }
+                    if (x.name < y.name) { return 1; }
+                    return 0;
+                }
+                var s = bathProducts.sort(SortArray)
+                appendProduct(s)
+            }
+        })
+    }
+</script>
