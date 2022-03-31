@@ -10,9 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style_bhagesh/main_css.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../navbar.css">
     </head>
 
     <body>
+        <div id="navbarinBody"></div>   
+        
     <div id="topImgDiv">
         <h2>Omega Fatty Acids</h2>
         <img id="topImg"src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_5_89e5eee4-47eb-4478-9210-37668f58686a.jpg?v=1647522432">
@@ -30,9 +34,21 @@
     </div>
 
     <div id="hairDiv" style="grid-template-columns: repeat(4, 22%);grid-template-rows: repeat(1, 450px);"></div>
+    
+    <div id="footer"></div>
     </body>
 
     </html>
     <script src="/Nutration_&_health_bhagesh/nutratation_script/omega.js">
  
     </script>
+
+<script type="module" src="../footer.js"></script>
+<script type="module">
+    import navbar from "../components/navbar.js";
+        // console.log(navbar)
+        let header=document.querySelector("#navbarinBody")
+    header.innerHTML=navbar();
+    </script>
+    
+    <script src="../Script.js"></script>

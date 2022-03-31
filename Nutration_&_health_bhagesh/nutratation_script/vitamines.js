@@ -40,6 +40,7 @@ function appendProduct(wowProducts) {
       localStorage.setItem("cartArr", JSON.stringify(cartArr));
       console.log(cartArr);
       alert("Product added to the cart!");
+      window.location.href="./../cart.html"
     })
 
     let box = document.createElement("div");
