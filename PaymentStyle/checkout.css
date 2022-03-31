@@ -1,0 +1,41 @@
+#confirmcontent
+{
+    border: solid 0.5px gray;
+    width: 60%;
+    height: 60px;
+    line-height: 5px;
+    color: gray;
+}
+.contentdark
+{
+  color: black;
+    font-size: 18px;
+}
+#Show
+{
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+}
+#shippingAdd
+{
+    border: solid 0.5px gray;
+    width: 80%;
+    height: inherit;
+    line-height: 15px;
+    color: gray; 
+}
+#shippingdiv
+{
+    width: 700px;
+    display: flex;
+    gap: 30px;
+}
+#billadd
+{
+    border: solid 0.5px gray;
+    width: 80%;
+    height: inherit;
+    line-height: 15px;
+    color: gray;  
+}

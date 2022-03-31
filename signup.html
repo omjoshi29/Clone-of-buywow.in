@@ -43,9 +43,15 @@ input {
   margin-top: 400px;
 }
     </style>
+    <link rel="stylesheet" href="./navbar.css">
   </head>
   <body>
+
     <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;font-weight: 400;font-size: 34px;">Create an account</h1>
+
+    <div id="navbarinBody"></div>
+    <h1 style="text-align: center;">Create an account</h1>
+
 
     <div class="one">
 
@@ -102,3 +108,15 @@ input {
   //     });
   // }
 </script>
+</script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+      // console.log(navbar)
+      let header=document.querySelector("#navbarinBody")
+  header.innerHTML=navbar();
+  </script>
+  
+  <script src="./Script.js">
+      
+  
+      </script>

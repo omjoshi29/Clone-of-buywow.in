@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart - WOW Skin Science</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #h1cart {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: 40px;
+            width: 79%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        #cartdiv {
+            margin-top: 30px;
+        }
+
+        #cartdiv>div {
+            display: flex;
+            height: 160px;
+            padding: 20px;
+            width: 79%;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: lighter;
+            border-top: 1px solid #d6d6d6;
+        }
+
+        #cartdiv>div:hover {
+            background-color: #f5f5f5;
+        }
+
+        #cartdiv>div>img {
+            height: 50%;
+        }
+
+        #cartdiv>div>p:nth-child(2) {
+            width: 290px;
+        }
+
+        #deletediv>i {
+            color: #5E6164;
+            cursor: pointer;
+        }
+
+        #deletediv>i:hover {
+            color: black;
+        }
+
+        #total {
+            width: 79%;
+            margin: auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #total>p {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        /* EMPTY CART */
+        #emptycart {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #emptycart>p:nth-child(1) {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        #emptycart>p:nth-child(2) {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+
+        #emptycart>button {
+            border: none;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: large;
+            font-weight: lighter;
+            width: 20%;
+            cursor: pointer;
+        }
+
+        /* QUANTITY BUTTON */
+        .control {
+            display: flex;
+            width: 180px;
+            height: 54px;
+            font-weight: lighter;
+            justify-content: space-between;
+            border: 1px solid #c9c9c9;
+            background-color: #EFEFEF;
+        }
+
+        .control .bttn-left {
+            border: none;
+            cursor: pointer;
+            font-weight: lighter;
+        }
+
+        .control .bttn-left:active {
+            border: 2px solid black;
+        }
+
+        .control .input {
+            width: 60px;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            border: none;
+            font-size: larger;
+            font-weight: lighter;
+            background-color: #EFEFEF;
+        }
+
+        .control a.bttn {
+            color: black;
+            text-decoration: none;
+        }
+
+        .control a.bttn,
+        .control .bttn {
+            width: calc(100px * 0.5);
+            padding: 0;
+            text-align: center;
+            box-shadow: none;
+            font-size: 24px;
+        }
+
+        .control .bttn-right {
+            border: none;
+            cursor: pointer;
+            font-weight: lighter;
+        }
+
+        .control .bttn-right:active {
+            border: 2px solid black;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1cart">Your Cart</h1>
+    <div id="emptycart"></div>
+    <div id="cartdiv"></div>
+    <div id="total">
+        <p id="grandtotal"></p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var cartArr = JSON.parse(localStorage.getItem("cartArr"));
+    console.log(cartArr);
+
+    var cartdiv = document.getElementById("cartdiv");
+
+    var emptycart = document.getElementById("emptycart");
+
+    var grandtotal = document.getElementById("grandtotal");
+
+    var sum = 0;
+
+    function appendProduct(cartArr) {
+        if (cartArr.length > 0) {
+            cartdiv.innerHTML = null;
+            cartArr.forEach(function (elem, index) {
+                let image = document.createElement("img");
+                image.src = elem.image;
+
+                let name = document.createElement("p");
+                name.innerText = elem.name;
+
+                let price = document.createElement("p");
+                price.innerText = "₹" + elem.price;
+
+                let control = document.createElement("div");
+                control.setAttribute("class", "control");
+
+                let minus = document.createElement("button");
+                minus.innerText = "-";
+                minus.setAttribute("id", "minus");
+                minus.setAttribute("class", "bttn bttn-left");
+
+                let input = document.createElement("input");
+                input.type = "number";
+                input.setAttribute("id", "input");
+                input.setAttribute("class", "input");
+
+                let plus = document.createElement("button");
+                plus.innerText = "+";
+                plus.setAttribute("id", "plus");
+                plus.setAttribute("class", "bttn bttn-right");
+
+                var quantity;
+
+                if (elem.quant === undefined) {
+                    elem.quant = 1;
+                    quantity = 1;
+                    localStorage.setItem("cartArr", JSON.stringify(cartArr));
+                }
+                else {
+                    quantity = elem.quant;
+                }
+
+                input.value = elem.quant;
+
+                minus.addEventListener('click', function (event) {
+                    if (quantity > 1) {
+                        quantity--;
+                        elem.quant = quantity;
+                        localStorage.setItem("cartArr", JSON.stringify(cartArr));
+                        input.value = elem.quant;
+                        location.reload();
+                    }
+                });
+
+                plus.addEventListener('click', function (event) {
+                    quantity++;
+                    elem.quant = quantity;
+                    localStorage.setItem("cartArr", JSON.stringify(cartArr));
+                    input.value = elem.quant;
+                    location.reload();
+                });
+
+                control.append(minus, input, plus);
+
+                let upprice = document.createElement("p");
+                upprice.innerText = "₹" + (+elem.price) * elem.quant;
+
+                sum += (+elem.price) * elem.quant;
+                grandtotal.innerText = "GRAND TOTAL: ₹" + sum;
+
+                let deletediv = document.createElement("div");
+                deletediv.setAttribute("id", "deletediv");
+                let i = document.createElement("i");
+                i.setAttribute("class", "far far fa-trash-alt");
+                deletediv.append(i);
+
+                i.addEventListener("click", function () {
+                    event.preventDefault();
+                    cartArr.splice(index, 1);
+                    localStorage.setItem("cartArr", JSON.stringify(cartArr));
+                    alert("Product removed from the cart");
+                    location.reload();
+                })
+
+                let box = document.createElement("div");
+                box.append(image, name, price, control, upprice, deletediv);
+                cartdiv.append(box);
+            });
+        }
+        else if (cartArr.length === 0) {
+            emptycart.innerHTML = null;
+
+            document.getElementById("h1cart").style.display = "none";
+
+            let p1 = document.createElement("p");
+            p1.innerText = "Your cart is empty!";
+
+            let p2 = document.createElement("p");
+            p2.innerText = "You have no items in your cart!"
+
+            let btn = document.createElement("button");
+            btn.innerText = "Check out our offerings!";
+
+            emptycart.append(p1, p2, btn);
+        }
+    }
+
+    appendProduct(cartArr);
+</script>
