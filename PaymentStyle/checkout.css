@@ -1,15 +1,18 @@
 #confirmcontent
 {
-    border: solid 0.5px gray;
+    border: solid 3px gray;
+    border-radius: 5px;
     width: 60%;
     height: 60px;
     line-height: 5px;
     color: gray;
+    padding: 20px;
 }
 .contentdark
 {
   color: black;
     font-size: 18px;
+   
 }
 #Show
 {
@@ -19,11 +22,13 @@
 }
 #shippingAdd
 {
-    border: solid 0.5px gray;
+    border: solid 3px gray;
+    border-radius: 5px;
     width: 80%;
     height: inherit;
     line-height: 15px;
     color: gray; 
+    padding: 20px;
 }
 #shippingdiv
 {
@@ -33,9 +38,42 @@
 }
 #billadd
 {
-    border: solid 0.5px gray;
+    border: solid 3px gray;
+    border-radius: 5px;
     width: 80%;
     height: inherit;
     line-height: 15px;
     color: gray;  
+    padding: 20px;
+}
+.mapouter
+{
+    padding: 10px;
+    border: 3px solid gray;
+     margin-top: 50px; 
+
+    margin-left: 10%;
+}
+
+#continue_shop
+{
+    margin-top: 35px;
+    /* margin-left: 10%; */
+text-decoration: none;
+cursor: pointer;
+font-size: 30px;
+color: black;
+
+
+    
+}
+#continue_shop:hover
+{
+    color:teal;
+}
+#left_arrow
+{
+    margin-left: 10%;
+    margin-right: 10px;
+    
 }
