@@ -62,9 +62,9 @@
 
     <!-- <p class="ptag">You will get a payment link on</p> -->
     <div id="sendLink">
-      <!-- <span><p class="ptag">+91 - 8000000008</p></span>
+      <!-- <span><p class="ptag">+91 - 8000000008</p></span> -->
       
-        <button class="Checkout">Get Link</button> -->
+        <h2 id="totalAmmounts">Get Link</h2>
         <button id="checkout" class="Checkout" >Checkout</button>
     </div>
    
@@ -91,6 +91,14 @@ function checkoutfunction()
 {
   alert("Payment Successfull! ")
   window.location.href="./checkout.html"
+
+
 }
+
+var grandtotalArr = JSON.parse(localStorage.getItem("grandTotal"))
+
+var totalAmmounts=document.querySelector("#totalAmmounts");
+
+totalAmmounts.innerText="Total Price :₹ "+grandtotalArr[0]
   </script>
 </html>

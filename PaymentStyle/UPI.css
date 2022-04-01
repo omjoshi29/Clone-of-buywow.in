@@ -35,7 +35,8 @@ hr{
     
    
     display: flex;
-    justify-content: space-around;
+   gap: 30px;
+   padding: 10px;
    
 }
 .ptag
@@ -43,11 +44,12 @@ hr{
     font-size: 16px;
 }
 .procedtopayment{
-    margin-left: 40%;
+    margin-left: 0px;
     width: 320px;
   }
   .Checkout
   {
+   margin-top: 18.5px;
     width: 320px;
     height: 40px;
     font-family: Poppins, sans-serif;
@@ -57,4 +59,10 @@ hr{
     gap: 10px;
     
     text-align: center;
+    
   }
+ 
+  /* #totalAmmounts
+  {
+    margin-bottom: 20px;
+  } */

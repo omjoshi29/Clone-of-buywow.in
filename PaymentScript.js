@@ -80,7 +80,7 @@ cartArr.map((ele)=>
   var name=document.createElement("p")
   name.innerText=ele.name
   var price=document.createElement("p")
-  price.innerText="₹ "+ele.price
+  price.innerText="₹"+ele.price
   var imgcart=document.createElement("img")
   imgcart.src=ele.image
   imgcart.setAttribute("id","imgcart")
@@ -89,6 +89,12 @@ cartArr.map((ele)=>
   dispaly_cart_product.append(innerProductsdiv)
 
 })
+var grandtotalArr = JSON.parse(localStorage.getItem("grandTotal"))
+
+var totalAmmounts=document.querySelector("#totalAmmounts");
+
+totalAmmounts.innerText="Total Price :₹ "+grandtotalArr[0]
+
 // dispaly_cart_product.innerHTML="jdfhfhmbj"
 
 
