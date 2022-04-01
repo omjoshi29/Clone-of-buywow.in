@@ -1,23 +1,6 @@
-
-let name= JSON.parse(localStorage.getItem("Fullname"));
-let address= JSON.parse(localStorage.getItem("address"));
-
-
-let Addressarr=[];
-
-let information= JSON.parse(localStorage.getItem("Info"));
-
-console.log(name)
-
-document.querySelector("#app1").innerText = name;
-document.querySelector("#app2").innerText = address;
-
-
-
 let arr= JSON.parse(localStorage.getItem("cartArr"));
 
 let appendedCart= document.querySelector("#appendedCart");
-
 
 const display = (arr)=>{
 console.log(arr)
@@ -57,57 +40,11 @@ showTotal(arr);
 
 
 
-
-let diffForm= document.querySelector("#diffForm");
+let item2= document.querySelector("#item2");
 
 import add from "./components_payment/add.js";
 
-document.querySelector("#method2").addEventListener("click",()=>{
- clicked();
-});
-
-const clicked= ()=>{
- diffForm.innerHTML= add();
-
-}
-// const getInfo= ()=>{
-
-//     let name= document.querySelector("#firs").value;
-
-//     let street= document.querySelector("#address").value; 
-//     let City = document.querySelector("#city").value;
-//     let State=document.querySelector("#istate").value;
-//     let zip=document.querySelector("#pin").value;
-//     let number=document.querySelector("#call").value;
-//     var randomorder=Math.ceil(Math.random() *(100000*10));
-    
-//     var addobj=
-//     {
-//       name,
-//       City,
-//       street,
-//       State,
-//       zip,
-//       number,
-//       randomorder
-//     }
-//     Addressarr.push(addobj)
-   
-//     localStorage.setItem("Address",JSON.stringify(Addressarr));
-// }
-
-
-
-document.querySelector("#method1").addEventListener("click",()=>{
- clicked2();
-});
-
-const clicked2= ()=>{
- diffForm.innerHTML= null;
-
- localStorage.setItem("Address",JSON.stringify(information));
-
-}
+item2.innerHTML= add();
 
 
 document.querySelector("#apply").addEventListener("click",()=>{
@@ -129,8 +66,61 @@ if(coupon == "wow30"){
 
 }
 
+let contact=[];
+let contact2= [];
+let Addressarr=[];
 
 document.querySelector("#btn").addEventListener("click",()=>{
-    window.location.href= "credentials.html"
-})
+
+    let first= document.querySelector("#firs").value;
+    let last = document.querySelector("#las").value;
+    let address= document.querySelector("#address").value; 
+    
+    
+    let fullName= first+last;
+    console.log(fullName)
+    
+    contact.push(fullName);
+    
+    contact2.push(address);
+    
+    localStorage.setItem("Fullname",JSON.stringify(contact));
+    
+    localStorage.setItem("address",JSON.stringify(contact2));
+
+
+    let name= document.querySelector("#firs").value;
+
+    let street= document.querySelector("#address").value; 
+    let City = document.querySelector("#city").value;
+    let State=document.querySelector("#istate").value;
+    let zip=document.querySelector("#pin").value;
+    let number=document.querySelector("#call").value;
+    var randomorder=Math.ceil(Math.random() *(100000*10));
+    
+    var addobj=
+    {
+      name,
+      City,
+      street,
+      State,
+      zip,
+      number,
+      randomorder
+    }
+    Addressarr.push(addobj)
+   
+    localStorage.setItem("Info",JSON.stringify(Addressarr));
+
+    window.location.href= "payment.html"
+
+});
+
+
+
+
+
+
+
+
 

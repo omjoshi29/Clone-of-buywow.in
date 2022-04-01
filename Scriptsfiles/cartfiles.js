@@ -9,6 +9,8 @@ var grandtotal = document.getElementById("grandtotal");
 
 var sum = 0;
 
+var grandtotalArr = JSON.parse(localStorage.getItem("grandTotal")) || [];
+
 function appendProduct(cartArr) {
     cartdiv.innerHTML = null;
     if (cartArr.length > 0) {
@@ -80,6 +82,10 @@ function appendProduct(cartArr) {
 
             sum += (+elem.price) * elem.quant;
             grandtotal.innerText = "GRAND TOTAL: ₹" + sum;
+            grandtotalArr = [];
+            grandtotalArr.push(sum);
+            console.log("arr: " + sum);
+            localStorage.setItem("grandTotal", JSON.stringify(grandtotalArr));
 
             let deletediv = document.createElement("div");
             deletediv.setAttribute("id", "deletediv");
