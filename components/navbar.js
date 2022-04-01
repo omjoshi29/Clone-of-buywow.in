@@ -72,7 +72,7 @@ const navbar=()=>
       <div class="dropdown">
           <span>   <a href="./../bathandbody.html">Bath&Body</a></span>
           <div class="dropdown-content">
-              <a href="./../bodywas.html"><p> Body Wash</p></a>
+              <a href="./../bodywash.html"><p> Body Wash</p></a>
               <a href="./../bathingbar.html"><p>Bathing Bar</p></a>
               <a href="./../handcream.html"><p>Hand Cream</p></a>
               <a href="./../handwash.html"><p>Hand Wash</p></a>
