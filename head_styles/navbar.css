@@ -120,10 +120,12 @@ margin: auto;
 }
 
 #searcch_Any_Produ {
+    border: none;
     margin-top: 10px;
     height: 40px;
     width: 50%;
     font-size: 20px;
+    margin-left: 20px;
 
 }
 

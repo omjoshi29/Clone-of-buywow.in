@@ -232,7 +232,7 @@ const navbar=()=>
 
 <div id="mySearch" class="sidepanelSearch">
   <a href="javascript:void(0)" class="closebtnSearch" onclick="closeNavSeach()">×</a>
- <h2>Find anything you need</h2>
+ <h2></ >Find anything you need</h2>
  <input type="text" id="searcch_Any_Produ" placeholder="Search Products" oninput="debounce(main,2000)">
 
  <diV id="showdsearchata"></div>
