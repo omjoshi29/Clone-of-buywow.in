@@ -1,9 +1,6 @@
 let arr= JSON.parse(localStorage.getItem("cartArr"));
-console.log(arr)
 
 let appendedCart= document.querySelector("#appendedCart");
-
-
 
 const display = (arr)=>{
 console.log(arr)
@@ -26,6 +23,7 @@ console.log(arr)
        
         appendedCart.append(div)
      })
+    
 }
 
 const showTotal= (arr)=>{
@@ -80,9 +78,6 @@ if(coupon == "wow30"){
     document.querySelector("#finalAmount").innerText= val - new_val;
 }
 
-
-
-
-
-
 }
+
+window.reload();
