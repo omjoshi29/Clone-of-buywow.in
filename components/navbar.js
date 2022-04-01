@@ -34,9 +34,9 @@ const navbar=()=>
 <!-- Skin Drop Down -->
 <div>
 <div class="dropdown">
-  <span class="main_bar"><a href="">Skin</a></span>
+  <span class="main_bar"><a href="./skin/skin.html">Skin</a></span>
   <div class="dropdown-content">
-      <a href="#"> <p> Face Wash</p></a>
+      <a href="./skin/face-wash.html"> <p> Face Wash</p></a>
           <a href="fragrance.html"> <p> Face Scrub</p></a>
               <a href="#"> <p>Best Seller</p></a>
                   <a href="#">  <p> Face Serum</p></a>
@@ -118,9 +118,9 @@ const navbar=()=>
           <div class="dropdown">
               <span>   <a href="#">Wellness</a></span>
               <div class="dropdown-content">
-                  <a href="#"><p> Hair Vanish</p></a>
-                  <a href="#"><p> Essential Oil</p></a>
-                  <a href="#"><p>Women Hygiene</p></a>
+                  <a href="./wellness-hair-vanish.html"><p> Hair Vanish</p></a>
+                  <a href="./wellnessessentialol.html"><p> Essential Oil</p></a>
+                  <a href="./WomenHygeine.html"><p>Women Hygiene</p></a>
                   
               </div>
             </div> 
