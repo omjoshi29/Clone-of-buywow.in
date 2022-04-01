@@ -37,17 +37,11 @@ const navbar= ()=>{
   <span class="main_bar"><a href="./skin/skin.html">Skin</a></span>
   <div class="dropdown-content">
 
-      <a href="./skin./face-wash.html"> <p> Face Wash</p></a>
-          <a href="./skin/face-scrub.html"> <p> Face Scrub</p></a>
-              <a href="#"> <p>Best Seller</p></a>
-                  <a href="#">  <p> Face Serum</p></a>
-                      <a href="#">   <p>Face Cream</p></a>
-                          <a href="#">  <p> Face Mask</p></a>
-                          <a href="#">  <p> Moisturizer</p></a>
-                          <a href="#">  <p> Sunscreen</p></a>
-                          <a href="#">  <p>Toner </p></a>
-                          <a href="#">  <p> Make Up Remover </p></a>
-                          <a href="#">  <p>  Under Eye Cream</p></a>
+      <a href="../skin/face-wash.html"> <p> Face Wash</p></a>
+          <a href="../skin/face-scrub.html"> <p> Face Scrub</p></a>
+                  <a href="../skin/face-serum.html">  <p> Face Serum</p></a>
+                      <a href="../skin/face-cream.html">   <p>Face Cream</p></a>
+                          <a href="../skin/face-mask.html">  <p> Face Mask</p></a>
   </div>
 </div> 
 
@@ -119,9 +113,9 @@ const navbar= ()=>{
           <div class="dropdown">
               <span>   <a href="#">Wellness</a></span>
               <div class="dropdown-content">
-                  <a href="./wellness-hair-vanish.html"><p> Hair Vanish</p></a>
-                  <a href="./wellnessessentialol.html"><p> Essential Oil</p></a>
-                  <a href="./WomenHygeine.html"><p>Women Hygiene</p></a>
+                  <a href="../wellness-hair-vanish.html"><p> Hair Vanish</p></a>
+                  <a href="../wellnessessentialol.html"><p> Essential Oil</p></a>
+                  <a href="../WomenHygeine.html"><p>Women Hygiene</p></a>
                   
               </div>
             </div> 
