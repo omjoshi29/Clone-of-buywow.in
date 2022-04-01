@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face serum</title>
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href=".././footer.css">
+    
+    <link rel="stylesheet" href=".././navbar.css">
+    
+    <link rel="stylesheet" href="./skin-style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div id="navbarinBody"></div>
+
+
+    <!-- Main container -->
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="skinDiv"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+</html>
+
+
+<script type="module" src="./skin-main.js"></script>  
+
+<script type="text/javascript" src="../Script.js"></script>
+
+<script>
+    
+    const skinProducts=
+[
+    {
+      "name": "Caffeine Face Serum - Quick Absorbing - OIL FREE - Anti-Aging, Anti-Wrinkles & Acne; Refresh, Revive & Restore Skin - 30 ml",
+      "price": "599",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/caffeine-serum-3_33e4b96e-0b75-4ea4-9ee9-9062d3e9f434_375x.jpg?v=1634729074"
+    },
+    {
+      "name": "Vitamin C Face Serum for Skin Whitening - Brightening and Hyperpigmentation",
+      "price": "699",
+      "ratings": "4.5",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/vitCserum_1_1280x.jpg?v=1643130400"
+    },
+    {
+      "name": "Retinol Face Serum - OIL FREE - Skin Plumping, Boost Collagen, Anti Acne, Anti Aging, Restoration - No Parabens, Silicones & Mineral Oil - 30 ml Retinol Face Serum - OIL FREE - Skin Plumping, Boost Collagen, Anti Acne, Anti Aging, Restoration - No Parabens, Silicones & Mineral Oil - 30 ml Retinol Face Serum - OIL FREE - Skin Plumping, Boost Collagen, Anti Acne, Anti Aging, Restoration - No Parabens, Silicones & Mineral Oil - 30 ml",
+      "price": "599",
+      "ratings": "4.5",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/retinol-serum-3_375x.jpg?v=1634725264"
+    },
+    {
+      "name": "Ubtan Face Serum - OIL FREE - For Anti Tanning, Radiance Boosting, Rejuvenating Skin - No Parabens, Silicones - 30 ml",
+      "price": "599",
+      "ratings": "4.5",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/ubtan-serum-1_0cee3e90-4048-46d6-b838-24e0c755e32d_1280x.jpg?v=1634724825"
+    },
+    {
+      "name": "Anti Acne Face Serum - Natural Neem Leaf Oil, Tea Tree Oil, Caviar Lime Fruit Extract - Spot Therapy - No Parabens, Silicones & Fragrance - 30 ml",
+      "price": "599",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/anti-acne-1_1280x.jpg?v=1595183853"
+    },
+    {
+      "name": "Vitamin C+(Plus) Face Serum - Vitamin C 20%, Ferulic Acid 1% - Brightening, Anti-Aging Skin Repair, Decrease formation of Fine Lines, Wrinkles & Brown Spots - Glass Bottle - 30 ml",
+      "price": "699",
+      "ratings": "4.5",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/VitC_-serum-3_1280x.jpg?v=1634723128"
+    },
+    {
+      "name": "Blemish Care Serum - OIL FREE - Anti Acne, Spot Reducing - No Parabens, Silicones, Synthetic Fragrance & Color - 50 ml",
+      "price": "499",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Blemish-Care-serum-3_1280x.jpg?v=1634729247"
+    },
+    {
+      "name": " Anti Aging Night Face Serum - OIL FREE - Anti Wrinkle, Anti Dullness, Reviving - No Parabens, Silicones & Color - 50 ml Anti Aging Night Face Serum - OIL FREE - Anti Wrinkle, Anti Dullness, Reviving - No Parabens, Silicones & Color - 50 ml Anti Aging Night Face Serum - OIL FREE - Anti Wrinkle, Anti Dullness, Reviving - No Parabens, Silicones & Color - 50 ml",
+      "price": "599",
+      "ratings": "4.5",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/AA-serum-1_1280x.jpg?v=1634729695"
+    },
+    {
+      "name": "Hyaluronic Acid Face Serum - Soothing & Repairing Dry and Aging Skin - For All Skin Types - No Parabens, Silicones & Mineral Oil - 30 ml",
+      "price": "699",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/hyaluronic-face-serum_1280x.jpg?v=1640771619"
+    },
+    {
+      "name": " Himalayan Rose Face Serum - with Rose Water, Rose Essential Oil & beetroot Extract - for Hydrating & Toning Skin - No Mineral Oil, Parabens, Silicones & Synthetic Color - 30mL",
+      "price": "209",
+      "ratings": "4.5",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/rose-face-serum_1280x.jpg?v=1640844020"
+    },
+    {
+      "name": "Green Tea Face Serum - with Green Tea & Aloe Vera Extracts - for Repairing & Restoring Skin - No Mineral Oil, Parabens, Silicones & Synthetic Color - 30mL",
+      "price": "209",
+      "ratings": "4.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/green-tea-face-serum_375x.jpg?v=1640857209"
+    }
+  ]
+
+</script>

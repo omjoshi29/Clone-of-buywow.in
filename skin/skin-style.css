@@ -1,0 +1,118 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#sortDiv {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#sorter {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#sorter>option {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+#skinDiv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, fit-content);
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#skinDiv>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#skinDiv>div>img {
+    width: 100%;
+}
+
+#skinDiv>div>p {
+    margin-top: 0px;
+}
+
+#skinDiv>div>p:nth-child(2) {
+    margin-top: 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#skinDiv>div>p:nth-child(3) {
+    font-weight: 600;
+}
+
+#cartbtn {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#skinDiv>div:hover #cartbtn {
+    display: block;
+}
+
+/* RATING STARS */
+:root {
+    --star-size: 30px;
+    --star-color: #eee;
+    --star-background: #fc0;
+}
+
+.Stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times;
+    line-height: 1;
+}
+
+.Stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#ratingdiv {
+    display: flex;
+    align-items: center;
+}
+
+#ratingdiv>p {
+    margin-right: 10px;
+}
+
+
+
+

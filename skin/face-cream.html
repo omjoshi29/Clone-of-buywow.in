@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face cream</title>
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href=".././footer.css">
+
+    <link rel="stylesheet" href=".././navbar.css">
+    
+    <link rel="stylesheet" href="./skin-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="navbarinBody"></div>
+
+
+    <!-- Main container -->
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="skinDiv"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+</html>
+
+
+<script type="module" src="./skin-main.js"></script>  
+
+<script type="text/javascript" src="../Script.js"></script>
+
+
+<script>
+    
+    const skinProducts=[
+    {
+      "name": "Vitamin C Face Cream For Skin Whitening, Brightening & Hyperpigmentation",
+      "price": "599",
+      "ratings": "4.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Vit-C-Cream-4_fbaccf05-787b-44e7-8152-b0edbda20313_1280x.jpg?v=1635399354"
+    },
+    {
+      "name": "Anti Aging Night Cream - 50 ml",
+      "price": "699",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/anti-aging-night-cream_1280x.jpg?v=1640932739"
+    },
+    {
+      "name": "10 in 1 Active Miracle No Parabens & Mineral Oil Day Cream - 50 ml",
+      "price": "649",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/10in1daycream1_1280x.jpg?v=1617863952"
+    },
+    {
+      "name": "Retinol Face Cream - Oil Free, Quick Absorbing - For All Skin Types - No Parabens, Silicones, Color, Mineral Oil & Synthetic Fragrance - 50 ml",
+      "price": "599",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/retinol-face-cream_1280x.jpg?v=1639561124"
+    },
+    {
+      "name": "Aloe Vera Face Cream - Multi-Vitamin - Light Quick Absorbing - For Normal to Oily Skin - No Parabens, Silicones, Color, Mineral Oil & Synthetic Fragrance - 50 ml",
+      "price": "209",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Aloe-Vera-Cream-4_1280x.jpg?v=1635398682"
+    },
+    {
+      "name": "Day Face Cream - SPF 20 - with Rosehip Oil & Shea Butter - OIL FREE - Quick Absorbing - Protect & Soften Skin - 50 ml Day Face Cream - SPF 20 - with Rosehip Oil & Shea Butter - OIL FREE - Quick Absorbing - Protect & Soften Skin - 50 ml Day Face Cream - SPF 20 - with Rosehip Oil & Shea Butter - OIL FREE - Quick Absorbing - Protect & Soften Skin - 50 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/day-face-cream_1280x.jpg?v=1640942272"
+    },
+    {
+      "name": "Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml Coconut Perfecting Cream with Vitamin E for Hydration & Even Complexion - For All Skin Types - No Sulphate, Parabens, Silicones & Color - 50 ml",
+      "price": "209",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Coconut-perfecting-cream-5_1280x.jpg?v=1635398921"
+    },
+    {
+      "name": "Red Onion Face Cream - Oil Free, Quick Absorbing - For All Skin Types - No Parabens, Silicones, Color, Mineral Oil & Synthetic Fragrance - 50 ml",
+      "price": "209",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Onion-4_1280x.jpg?v=1578293823"
+    },
+    {
+      "name": "Coconut Water Full Cream With Hyaluronic Acid for Deep Hydration & Youthful Skin - For All Skin Types - 50 ml",
+      "price": "299",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/coconut-water-cream_1280x.jpg?v=1641019765"
+    }
+  ]
+
+//  
+    
+</script>

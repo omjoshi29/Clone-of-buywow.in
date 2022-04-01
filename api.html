@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            width:20px;
+            border-radius: 22px;
+        }
+        #p{
+            margin-top:-24px;
+            margin-left :22px;
+        }
+        body {
+    margin: 0px;
+  }
+  #navbar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  #logo {
+    width: 5%;
+    text-align: right;
+  }
+  #logo img {
+    width: 30%;
+    border-radius: 80%;
+    padding: 9px;
+  }
+  #profile img {
+    border-radius: 80%;
+    width: 50%;
+    height: 35px;
+    padding-top: 7%;
+  }
+  #search {
+    width: 10%;
+    padding: 12px;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  
+  #list li {
+    display: inline;
+    margin-right: 2%;
+  }
+  #options {
+    width: 75%;
+  }
+  #profile {
+    width: 5%;
+  }
+  
+  
+  #main{
+  
+  
+  padding: 3%;
+  }
+  
+    </style>
+</head>
+<body>
+    
+    <div id ="navbar">
+        <div id="logo">	
+	
+            <a href='/'>
+            <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.C0It0Y9-HXIu_ieBD9beNwAAAA%26pid%3DApi&f=1"
+            alt=""
+            srcset=""
+            />
+            </a>
+            </div>
+            <div id="search">
+            <input id="search-input" type="text" placeholder="Search Github" />
+            </div>
+            
+            <div id="options">
+            <ul id="list">
+            <li>Pull Requests</li>
+            <li>Issues</li>
+            <li>Marketplace</li>
+            <li><a href='explore.html'> Explore</a></li>
+            </ul>
+            </div>
+            
+            <div id="profile">
+            <img
+            id="profile-img"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.fRjYMjw7_Ymj8eNXiP5JNAHaEK%26pid%3DApi&f=1"
+            alt=""
+            srcset=""
+            />
+            </div>
+    </div>
+    <div id="body">
+
+    </div>
+</body>
+</html>
+<script type="module"> // why we need to type module in script it allow u to import and export no need to use async anymore directly we can use await
+// import header from './components/header.js';   // we can use any name if we keep export default 
+
+// console.log(header)
+// let navbar=document.getElementById("navbar");
+// navbar.innerHTML=header();
+let input_box=document.getElementById("search-input");
+input_box.addEventListener("keypress",() =>{
+    getData(event);
+})
+let img =document.getElementById('profile-img');
+
+const getData = async(e) => {
+    try{
+    if(e.code === 'Enter'){
+        let input =input_box.value;
+        let res = await fetch(`https://gmail.googleapis.com/gmail/v1/search?part=snippet&q=${input}&key=AIzaSyBuk0Ex6YXPt7F_rCt2WR0OCzMjS8NRVM0`);
+        // `https://gmail.googleapis.com/gmail/v1/search?part=snippet&q=${input}&key=AIzaSyBuk0Ex6YXPt7F_rCt2WR0OCzMjS8NRVM0`
+
+        // api key AIzaSyBuk0Ex6YXPt7F_rCt2WR0OCzMjS8NRVM0
+        
+        let data = await res.json();
+        console.log(data);
+
+         img.src=data[0].owner.avatar_url;
+         displaydata(data);
+    }
+}
+catch(error){
+    console.log(error);
+}
+}
+
+
+
+
+function displaydata(data){
+    data.map((elem)=>{
+        var div = document.createElement("div");
+        var p = document.createElement('p');
+        p.setAttribute("id","p")
+        var img = document.createElement('img');
+        img.src=data[0].owner.avatar_url;
+        img.setAttribute("id","image");
+        p.innerText=`${data[0].owner.login}/${elem.name}`;
+        document.querySelector("#body").append(img,p);
+    })
+}
+</script>
