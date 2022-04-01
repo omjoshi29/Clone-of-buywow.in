@@ -76,7 +76,7 @@ const navbar=()=>
 </div>
   <div>
       <div class="dropdown">
-          <span>   <a href="#">Bath&Body</a></span>
+          <span>   <a href="./../bathandbody.html">Bath&Body</a></span>
           <div class="dropdown-content">
               <a href="#"><p> Body Wash</p></a>
               <a href="#"><p>Bathing Bar</p></a>
@@ -214,7 +214,7 @@ const navbar=()=>
       <p id="grandtotal1"></p>
   </div>
   <div id="viewcart1">
-      <a href="./cart.html">View Cart</a>
+      <a href="./../cart.html">View Cart</a>
   </div>
   
 </div>
@@ -224,7 +224,7 @@ const navbar=()=>
   <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">×</a>
   <a href="../login.html" id="">Log in</a>
   <a href="../signup.html">Register</a>
-  <a href="#">View Cart</a>
+  <a href="./../cart.html">View Cart</a>
   
 </div>
 

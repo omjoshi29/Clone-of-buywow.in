@@ -10,9 +10,11 @@ var grandtotal = document.getElementById("grandtotal");
 var sum = 0;
 
 function appendProduct(cartArr) {
+    cartdiv.innerHTML = null;
     if (cartArr.length > 0) {
-        cartdiv.innerHTML = null;
+       
         cartArr.forEach(function (elem, index) {
+           
             let image = document.createElement("img");
             image.src = elem.image;
 
@@ -100,7 +102,8 @@ function appendProduct(cartArr) {
     }
     else if (cartArr.length === 0) {
         emptycart.innerHTML = null;
-
+        document.getElementById("paybutton").style.display = "none";
+        document.getElementById("pay").style.display = "none";
         document.getElementById("h1cart").style.display = "none";
 
         let p1 = document.createElement("p");
@@ -113,6 +116,7 @@ function appendProduct(cartArr) {
         btn.innerText = "Check out our offerings!";
 
         emptycart.append(p1, p2, btn);
+
     }
 }
 
