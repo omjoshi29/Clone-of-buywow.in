@@ -6,15 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bath and Body - WOW Skin Science</title>
+    <link rel="stylesheet" href="footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./bathprod.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./Styles/sample.css">
+    <link rel="stylesheet" href="./Styles/minicart.css">
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="/Styles/main_css.css"> -->
 </head>
 
 <body>
+    <div id="navbarinBody"></div>
+    
     <div id="bathHeader">
         <h1>Bath & Body</h1>
         <img src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885"
@@ -34,6 +43,8 @@
     </div>
 
     <div id="bathDiv"></div>
+
+    <div id="footer"></div>
 </body>
 
 </html>
@@ -126,3 +137,16 @@
         })
     }
 </script>
+
+<!-- NAVBAR -->
+<script type="module">
+    import navbar from "./components/navbar.js";
+    // console.log(navbar)
+    let header = document.querySelector("#navbarinBody")
+    header.innerHTML = navbar();
+</script>
+
+<script src="./Script.js"></script>
+
+<!-- FOOTER -->
+<script type="module" src="footer.js"></script>

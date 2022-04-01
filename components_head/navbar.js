@@ -1,19 +1,19 @@
-const navbar=()=>
-{
+const navbar= ()=>{
+
     return `<a href="" class="acho">
          
     <div  id="navpromo" > 
-      
+      <div id="promo">
          <p class="promo-title">
-           
-           BUY 1 GET 1 FREE - ENDING SOON
-       
+            New! 
+            <span class="embelished" >BUY 1 GET 1 FREE - ENDING SOON </span>
+          <span>(In Select Store)</span>
          
-         
-              
-          
+          <span class="closing">
+              <u>Learn More</u> 
+          </span>
           </p>  
-   
+      </div>
     
   </div>
 </a>
@@ -180,17 +180,17 @@ const navbar=()=>
 <div>
               <div id="serchbox" >
             <!-- <input type="text" placeholder="search by fregamens products" class="input"> -->
-            <button class="openbtn" onclick="serach()"><img class="login_bag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"/></button>  
+            <button class="openbtn" id="openbtn" onclick="serach()"><img class="login_bag"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"/></button>  
 
                   
               </div>
               <div>
-                  <button class="openbtn" onclick="openNav1()"><img class="login_bag"  src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"/></button>  
+                  <button class="openbtn" id="openbtn1" onclick="openNav1()"><img class="login_bag"  src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png"/></button>  
 
-                 
+                  <!-- <a href="signin.html" > <img class="login_bag" src=""/></a> -->
               </div>
               <div>
-                  <button class="openbtn" onclick="openNav()"><img class="login_bag"  src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-add-to-cart-icon-png-image_5060869.jpg"/></button>  
+                  <button class="openbtn" id="openbtn2" onclick="openNav()"><img class="login_bag"  src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-add-to-cart-icon-png-image_5060869.jpg"/></button>  
               </div>
           </div>
              
@@ -207,23 +207,15 @@ const navbar=()=>
 
 <div id="mySidepanel" class="sidepanel">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <h1 id="h1cart1">Your Cart</h1>
-  <div id="emptycart1"></div>
-  <div id="cartdiv1"></div>
-  <div id="total1">
-      <p id="grandtotal1"></p>
-  </div>
-  <div id="viewcart1">
-      <a href="./cart.html">View Cart</a>
-  </div>
+  <a href="#">ADD to CART</a>
   
 </div>
 
 
 <div id="mySidepanel1" class="sidepanel1">
   <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">×</a>
-  <a href="../login.html" id="">Log in</a>
-  <a href="../signup.html">Register</a>
+  <a href="./signin.html" id="">Log in</a>
+  <a href="#">Register</a>
   <a href="#">View Cart</a>
   
 </div>
@@ -234,10 +226,8 @@ const navbar=()=>
   <a href="javascript:void(0)" class="closebtnSearch" onclick="closeNavSeach()">×</a>
  <h2>Find anything you need</h2>
  <input type="text" id="searcch_Any_Produ" placeholder="Search Products" oninput="debounce(main,2000)">
-
- <diV id="showdsearchata"></div>
-  
-</div>`;
+  <div id="show"></div>
+</div>`
 
 }
 export default navbar
