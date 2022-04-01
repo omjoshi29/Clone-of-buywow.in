@@ -4,15 +4,7 @@ const navbar= ()=>{
          
     <div  id="navpromo" > 
       <div id="promo">
-         <p class="promo-title">
-            New! 
-            <span class="embelished" >BUY 1 GET 1 FREE - ENDING SOON </span>
-          <span>(In Select Store)</span>
-         
-          <span class="closing">
-              <u>Learn More</u> 
-          </span>
-          </p>  
+          
       </div>
     
   </div>
@@ -222,7 +214,7 @@ const navbar= ()=>{
 
 <div id="mySearch" class="sidepanelSearch">
   <a href="javascript:void(0)" class="closebtnSearch" onclick="closeNavSeach()">×</a>
- <h2>Find anything you need</h2>
+ <h2 id="findanything">Find anything you need</h2>
  <input type="text" id="searcch_Any_Produ" placeholder="Search Products" oninput="debounce(main,2000)">
   <div id="show"></div>
 </div>`;

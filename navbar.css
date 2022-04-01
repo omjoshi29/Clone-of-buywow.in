@@ -69,7 +69,7 @@ p a {
     gap: 20px;
 }
 #div2{
-    height:350px;
+    height:fit-content;
     width:350px;
     padding: 50px;
     cursor: pointer;
