@@ -37,7 +37,7 @@ a{
    border-radius: 8px;
 }
 #personal{
-height:100px;
+height:auto;
    width:65%;
    border:1px solid #ada7a7;
    margin-left: 200px;
@@ -46,11 +46,14 @@ height:100px;
 }
 #row1{
    display: flex;
-   justify-content: space-between;
+
 }
 #row2{
    display: flex;
-   justify-content: space-between;
+
+}
+#line{
+    margin-top:0px;
 }
 #h2{
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -232,6 +235,7 @@ background-color: #fafafa;
     margin: 30px;
     display: flex;  
     gap:20px;
+    justify-content: space-around;
 }
 #firs{
     height:32px;
@@ -242,9 +246,10 @@ background-color: #fafafa;
 }
 #las{
     height:32px;
-    width:340px;
+    width:400px;
     border:1px solid #ada7a7;
     border-radius: 5px;
+    margin-right:-20px;
 }
 #address,#office{
     height:32px;
@@ -402,3 +407,18 @@ border-radius: 5px;
     height:100px;
     width:100%;
 }
+#app1{
+    margin-top: 20px;
+    margin-left:95px;
+}
+#app2{
+    margin-top:0px;
+    margin-left:30px;
+}
+#nam{
+    margin-top:20px;
+}
+#sheep{
+    margin-top:0px;
+}
+
