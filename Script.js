@@ -84,7 +84,7 @@ var cartArr = JSON.parse(localStorage.getItem("cartArr"));
 console.log(cartArr);
 
 var cartdiv1 = document.getElementById("cartdiv1");
- cartdiv1.innerText=""
+
 var emptycart1 = document.getElementById("emptycart1");
 
 var grandtotal1 = document.getElementById("grandtotal1");
