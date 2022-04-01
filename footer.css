@@ -9,9 +9,10 @@ body {
     color: white;
     padding-top: 60px;
     padding-bottom: 60px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 60px;
+    font-size: 15px;
 }
 #four a {
     color: aliceblue;
@@ -27,7 +28,6 @@ body {
 a{
     text-decoration: none;
     color: white;
-    /* font-weight: bold; */
     font-family: HCoGothamSSmSemiBold,Arial,Sans-Serif;
 
 }
@@ -41,6 +41,9 @@ a{
 #one{
     line-height: 24px;
 }
+/* div:nth-child(4n) {
+    color: lime;
+  } */
 
 #two .social-links{
     display: flex;

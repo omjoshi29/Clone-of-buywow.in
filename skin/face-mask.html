@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face mask</title>
+    <script src="https://kit.fontawesome.com/4e68ce48c2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href=".././footer.css">
+    <link rel="stylesheet" href=".././navbar.css">
+    <link rel="stylesheet" href="./skin-style.css">
+
+    
+</head>
+<body>
+    <!-- Header -->
+    <div id="navbarinBody"></div>
+
+
+    <!-- Main container -->
+    <div id="sortDiv">
+        <select id="sorter">
+            <option value="">Sort By</option>
+            <option value="l2h">Price, Low To High</option>
+            <option value="h2l">Price, High To Low</option>
+            <option value="rl2h">Rating, Low To High</option>
+            <option value="rh2l">Rating, High To Low</option>
+            <option value="a2z">Alphabetically, A To Z</option>
+            <option value="z2a">Alphabetically, Z To A</option>
+        </select>
+    </div>
+
+    <div id="skinDiv"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+</body>
+</html>
+
+
+<script type="module" src="./skin-main.js"></script>  
+
+<script type="text/javascript" src="../Script.js"></script>
+
+<script>
+    
+    const skinProducts=[
+    {
+      "name": "Activated Charcoal Peel Off Mask - 100 ml",
+      "price": "399",
+      "ratings": "4.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/peeloff_1_1280x.jpg?v=1643121694"
+    },
+    {
+      "name": "Vitamin C Clay Face Mask with Lemon & Orange Essential Oils, Jojoba Oil & Bentonite Clay - For Skin Brightening - 200 ml",
+      "price": "599",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/vitamin-c-face-pack_1280x.jpg?v=1639635772"
+    },
+    {
+      "name": " Gold Clay Face Mask for Hydrating Skin & Restoring Radiance - No Parabens, Sulphate, Mineral Oil & Color - 200 ml",
+      "price": "499",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Gold-Face-Mask-1_c5f1c6da-0bb0-4618-9c57-edf122f5197b_1280x.jpg?v=1635329478"
+    },
+    {
+      "name": "Anti-Acne Neem & Tea Tree Clay Face Mask for Refreshing & Refining Acne Prone Skin - For All Skin Types - 200 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/anti-acne-neem-face-pack_1280x.jpg?v=1641031398"
+    },
+    {
+      "name": "Aloe Vera with Green Tea Extract and Hyaluronic Acid Sleeping Pack - No Parabens, Silicones & Color - 100 ml",
+      "price": "122",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Aloe-Vera-Sleepinh-Pack-1_1280x.jpg?v=1635328479"
+    },
+    {
+      "name": "Chocolate Caffeine Face Mask for Recharging & Rejuvenating Dull Skin - No Parabens, Sulphate, Mineral Oil & Color - 200 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Chocolate-clay-face-mask-1_1280x.jpg?v=1635329411"
+    },
+    {
+      "name": "Aloe Vera with Hyaluronic Acid & Pro Vitamin B5 Peel Off Gel Mask - 100 ml",
+      "price": "122",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Aloe-vera-gel-mask_375x.jpg?v=1570252543"
+    },
+    {
+      "name": "Turmeric Clay Face Mask For Helping To Brighten & Even Out Complexion - No Parabens, Sulphate, Mineral Oil & Color - 200 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/turmeric-clay-face-mask-1_1280x.jpg?v=1635329796"
+    },
+    {
+      "name": "Pink Rose Clay Face Mask for Hydrating & Rejuvenating Aging Skin - No Parabens, Sulphate, Mineral Oil & Color - 200 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Rose-Clay-Face-Mask-1_375x.jpg?v=1635329688"
+    },
+    {
+      "name": "Anti-Aging Fuji Matcha Green Tea Clay Face Mask - 200 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Fuji-Matcha-Clay-Face-Mask-1_1280x.jpg?v=1635329099"
+    },
+    {
+      "name": "Sangria Face Mask for Energizing Dull, Tired, Patchy Skin - For All Skin Types - No Parabens, Sulphate & Mineral Oil - 200 ml",
+      "price": "174",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/Sangria-Face-Mask-1_1280x.jpg?v=1635329733"
+    },
+    {
+      "name": "Green Tea Sleeping Mask - with Green Tea & Aloe Vera Extracts - for Exfoliating & Clarifying Skin - No Mineral Oil, Parabens, Silicones & Synthetic Color - 100mL",
+      "price": "122",
+      "ratings": "5.0",
+      "image": "https://cdn.shopify.com/s/files/1/1375/4957/products/GTSleepingMask1_1280x.jpg?v=1629881805"
+    }
+  ]
+  
+</script>
