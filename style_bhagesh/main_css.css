@@ -27,7 +27,7 @@
 #hairDiv {
     display: grid;
     gap: 13px;
-    /* width: 80%; */
+   
     margin: auto;
     margin-top: 20px;
     margin-left: 110px;
@@ -48,8 +48,8 @@
 
 #hairDiv>div>p {
     margin-top: 30px;
-    font-size: 14.5px;
-    margin-bottom: -5px;
+    font-size: 16px;
+    margin-bottom: -2px;
 }
 
 #hairDiv>div>p:nth-child(2) {
@@ -64,15 +64,19 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    
+
+    
 }
 
 #hairDiv>div>p:nth-child(3) {
     font-weight: 600;
-    margin-top: -10px;
+    margin-top: 0px;
+    /* margin-bottom: 0px; */
 }
 
 #cartbtn {
-    padding: 9px;
+    padding: 13px;
     background-color: black;
     color: white;
     font-size: 15px;
@@ -80,24 +84,25 @@
     border: none;
     cursor: pointer;
     display: none;
-    margin-top: -20px;
+    margin-top: -5px;
 }
 
 #hairDiv>div:hover #cartbtn {
     display: block;
 }
 #topImgDiv{
-    width: 960px;
-    height: 320px;
-    /* border: 1px solid red; */
+    width: 80%;
+    height: 360px;
+    
     margin: auto;
     
 }
 #topImgDiv>h2{
-    font-weight: 400;
+    font-weight: 100%;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 27px;
+    font-weight: 400;
 }
 #topImg{
     width: 100%;
@@ -116,7 +121,7 @@
     font-size: var(--star-size);
     font-family: Times;
     line-height: 1;
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 .Stars::before {
@@ -131,12 +136,11 @@
 #ratingdiv {
     display: flex;
     align-items: center;
-    /* margin-top: 0px;
-    margin-bottom: 0px; */
+    
 }
 
 #ratingdiv>p {
     font-size: 15px;
     margin-right: 10px;
-    margin-top: -15px;
+    margin-top: 0px;
 }

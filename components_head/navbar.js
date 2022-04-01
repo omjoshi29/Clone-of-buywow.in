@@ -34,19 +34,14 @@ const navbar= ()=>{
 <!-- Skin Drop Down -->
 <div>
 <div class="dropdown">
-  <span class="main_bar"><a href="">Skin</a></span>
+  <span class="main_bar"><a href="./skin/skin.html">Skin</a></span>
   <div class="dropdown-content">
-      <a href="#"> <p> Face Wash</p></a>
-          <a href="fragrance.html"> <p> Face Scrub</p></a>
-              <a href="#"> <p>Best Seller</p></a>
-                  <a href="#">  <p> Face Serum</p></a>
-                      <a href="#">   <p>Face Cream</p></a>
-                          <a href="#">  <p> Face Mask</p></a>
-                          <a href="#">  <p> Moisturizer</p></a>
-                          <a href="#">  <p> Sunscreen</p></a>
-                          <a href="#">  <p>Toner </p></a>
-                          <a href="#">  <p> Make Up Remover </p></a>
-                          <a href="#">  <p>  Under Eye Cream</p></a>
+
+      <a href="../skin/face-wash.html"> <p> Face Wash</p></a>
+          <a href="../skin/face-scrub.html"> <p> Face Scrub</p></a>
+                  <a href="../skin/face-serum.html">  <p> Face Serum</p></a>
+                      <a href="../skin/face-cream.html">   <p>Face Cream</p></a>
+                          <a href="../skin/face-mask.html">  <p> Face Mask</p></a>
   </div>
 </div> 
 
@@ -57,18 +52,17 @@ const navbar= ()=>{
 
 <div>
 <div class="dropdown">
-  <span><a href="#">Hair</a></span>
+  <span><a href="./Hair_bhagesh/hair.html">Hair</a></span>
   <div class="dropdown-content">
      
-          <a href=""  ><p> Hair Oil </p></a>
+          <a href="./Hair_bhagesh/hairoil.html"  ><p> Hair Oil </p></a>
          
-          <a href=""  ><p>  Hair Combo Kit</p></a>
-          <a href=""  ><p> Shampoo </p></a>
-          <a href=""  ><p> Conditioner </p></a>
-          <a href=""  ><p> Hair Mask </p></a>
-          <a href=""  ><p> Hair Serum </p></a>
-          <a href=""  ><p>  Scalp Brush</p></a>
-          <a href=""  ><p> Hair Spray / Revitalizer </p></a>
+          <a href="./Hair_bhagesh/combokit.html"  ><p>  Hair Combo Kit</p></a>
+          <a href="./Hair_bhagesh/shampoo.html"  ><p> Shampoo </p></a>
+          <a href="./Hair_bhagesh/conditioner.html"  ><p> Conditioner </p></a>
+        
+          <a href="./Hair_bhagesh/scalp_brush.html"  ><p>  Scalp Brush</p></a>
+          <a href="./Hair_bhagesh/hairspray.html"  ><p> Hair Spray / Revitalizer </p></a>
 
   </div>
 </div> 
@@ -76,17 +70,15 @@ const navbar= ()=>{
 </div>
   <div>
       <div class="dropdown">
-          <span>   <a href="#">Bath&Body</a></span>
+          <span>   <a href="./../bathandbody.html">Bath&Body</a></span>
           <div class="dropdown-content">
-              <a href="#"><p> Body Wash</p></a>
-              <a href="#"><p>Bathing Bar</p></a>
-              <a href="#"><p>Hand Cream</p></a>
-              <a href="#"><p>Body Scrub</p></a>
-              <a href="#"><p>Hand Wash</p></a>
-              <a href="#"><p>Body Lotion</p></a>
-              <a href="#"><p>Body Butter</p></a>
+              <a href="./../bodywash.html"><p> Body Wash</p></a>
+              <a href="./../bathingbar.html"><p>Bathing Bar</p></a>
+              <a href="./../handcream.html"><p>Hand Cream</p></a>
+              <a href="./../handwash.html"><p>Hand Wash</p></a>
+              <a href="./../bodylotion.html"><p>Body Lotion</p></a>
+              <a href="./../bodybutter.html"><p>Body Butter</p></a>
 
-              <a href="#"><p>Massage Oil</p></a>
     
           </div>
         </div> 
@@ -118,9 +110,9 @@ const navbar= ()=>{
           <div class="dropdown">
               <span>   <a href="#">Wellness</a></span>
               <div class="dropdown-content">
-                  <a href="#"><p> Hair Vanish</p></a>
-                  <a href="#"><p> Essential Oil</p></a>
-                  <a href="#"><p>Women Hygiene</p></a>
+                  <a href="../wellness-hair-vanish.html"><p> Hair Vanish</p></a>
+                  <a href="../wellnessessentialol.html"><p> Essential Oil</p></a>
+                  <a href="../WomenHygeine.html"><p>Women Hygiene</p></a>
                   
               </div>
             </div> 
@@ -130,16 +122,15 @@ const navbar= ()=>{
 
           <div>
               <div class="dropdown">
-                  <span>   <a href="#">Nutrition&Health</a></span>
+                  <span>   <a href="./Nutration_&_health_bhagesh/nutrition_&_health.html">Nutrition&Health</a></span>
                   <div class="dropdown-content">
                       
-                      <a href="#"><p>Immunity Care</p></a>
-                      <a href="#"><p>Proteins</p></a>
-                      <a href="#"><p>Multivitamins</p></a>
-                      <a href="#"><p>Weight Management</p></a>
-                      <a href="#"><p>Detox</p></a>
-                      <a href="#"><p>Gut Health</p></a>
-                      <a href="#"><p>Antioxidants</p></a>
+                      <a href="./Nutration_&_health_bhagesh/immunity_care.html"><p>Immunity Care</p></a>
+                      <a href="./Nutration_&_health_bhagesh/protin.html"><p>Proteins</p></a>
+                      <a href="./Nutration_&_health_bhagesh/vitamins.html"><p>Vitamins</p></a>
+                      <a href="./Nutration_&_health_bhagesh/skin_hair_protection.html"><p>Skin & Hair Nutrition</p></a>
+                      <a href="./Nutration_&_health_bhagesh/omega.html"><p>Omega Fatty Acids</p></a>
+                      <a href="./Nutration_&_health_bhagesh/antioxdiant.html"><p>Antioxidants</p></a>
                      
                   </div>
                 </div> 
@@ -149,7 +140,7 @@ const navbar= ()=>{
 
 
               <div class="dropdown">
-                  <span>   <a href="#">combos</a></span>
+                  <span>   <a href="./combos_bhagesh/combos.html">Combos</a></span>
                   <div class="dropdown-content">
                    
                   </div>
@@ -157,16 +148,15 @@ const navbar= ()=>{
 
 
               <div class="dropdown">
-                  <span>   <a href="#">Collection</a></span>
+                  <span>   <a href="./collection_bhagesh/collections.html">Collection</a></span>
                   <div class="dropdown-content">
-                      <a href="#"><p> Apple Cider Vinegar</p></a>
-                      <a href="#"><p>  Aloe Vera</p></a>
-                       <a href="#"><p>Activated Charcoal</p></a>
-                      <a href="#"><p>Argan Oil</p></a>
-                      <a href="#"><p> Himalayan Rose</p></a>
-                      <a href="#"><p> Red Onion Black Seed Oil</p></a>
-                      <a href="#"><p> Ubtan Range</p></a>
-                      <a href="#"><p>   Vitamin C</p></a>
+                      <a href="./collection_bhagesh/apple_.html"><p> Apple Cider Vinegar</p></a>
+                      <a href="./collection_bhagesh/alover.html"><p>  Aloe Vera</p></a>
+                       <a href="./collection_bhagesh/amla.html"><p>Amla</p></a>
+                      <a href="./collection_bhagesh/rice_water.html"><p>Rice Water</p></a>
+                      <a href="./collection_bhagesh/himalaya_rose.html"><p> Himalayan Rose</p></a>
+                      <a href="./collection_bhagesh/red_onion_black_seed_oil.html"><p> Red Onion Black Seed Oil</p></a>
+                      <a href="./collection_bhagesh/vitamin_c.html"><p>   Vitamin C</p></a>
                       
                   </div>
                 </div> 
@@ -235,7 +225,7 @@ const navbar= ()=>{
  <h2>Find anything you need</h2>
  <input type="text" id="searcch_Any_Produ" placeholder="Search Products" oninput="debounce(main,2000)">
   <div id="show"></div>
-</div>`
+</div>`;
 
 }
 export default navbar

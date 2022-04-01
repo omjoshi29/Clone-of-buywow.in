@@ -32,8 +32,9 @@ function appendProduct(bathProducts) {
       cartArr.push(elem);
       localStorage.setItem("cartArr", JSON.stringify(cartArr));
       console.log(cartArr);
-      // alert("Product added to the cart!");
-      window.location.href="./cart.html"
+       alert("Product added to the cart!");
+      // window.location.href="./cart.html"
+      location.reload()
     })
 
     let box = document.createElement("div");
