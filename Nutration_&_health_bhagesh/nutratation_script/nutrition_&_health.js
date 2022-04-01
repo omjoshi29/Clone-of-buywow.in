@@ -1,6 +1,16 @@
 var wowProducts=
 
-[{"name":"Immunity Booster Capsules - Support Healthy Immune System - 60 Veg Capsules","price":"699","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/immunity-booster-capsules_1280x.jpg?v=1639722786"},
+[{"name":"Omega 3 1000mg Capsules with Fish Oil - EPA + DHA Enriched 60 Capsules","price":"899","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/omega-3-capsules_1280x.jpg?v=1625757030"},
+{"name":"Algae-Rich Omega 3 Capsules - EPA + DHA Enriched Vegan Capsules - 60 Vegetarian Capsules","price":"699","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/algae-rich-omega-3-capsules_1280x.jpg?v=1637648304"},
+{"name":"Krill Oil Capsules - Enriched with EPA, DHA & Astaxanthin - 500mg Krill Oil - 30 Softgel Capsules","price":"999.00","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Krill-oil-1_1_1280x.jpg?v=1643807965"},
+{"name":"Glutathione with Milk Thistle Extract 500 mg - 30 Vegetarian Capsules","price":"599","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/glutathione-capsules_1280x.jpg?v=1639203726"},
+{"name":"Vegetarian Milk Thistle Capsules 600mg - 60 Capsules","price":"599","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/milk-thistle-capsules_1280x.jpg?v=1639807752"},
+{"name":"Vegetarian Vitamin K2 Capsules 55mcg - 60 Capsules","price":"499","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/k2-capsules_1280x.jpg?v=1639980856"},
+{"name":"Plant-Based Biotin Powder – For Stronger Hair & Healthier Skin – 250g","price":"1249","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/plant-based-biotin-powder_1280x.jpg?v=1634021531"},
+{"name":"Ayurvedic Biotin Capsules from Sesbania agati - Made with natural Sesbania agati (500mg) - For Stronger Hair & Healthier Skin - 60 Capsules","price":"799","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/milk-thistle-capsules_1280x.jpg?v=1639807752"},
+{"name":"Vegetarian Milk Thistle Capsules 600mg - 60 Capsules","price":"999","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/l-arginine-capsules_1280x.jpg?v=1640256766"},
+{"name":"Glutathione with Milk Thistle Extract 500 mg - 30 Vegetarian Capsules","price":"599","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/glutathione-capsules_1280x.jpg?v=1639203726"},
+{"name":"Immunity Booster Capsules - Support Healthy Immune System - 60 Veg Capsules","price":"699","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/immunity-booster-capsules_1280x.jpg?v=1639722786"},
 {"name":"Multivitamin for Women - with Vitamin A, Lutein & Lycopene - 60 Veg Capsules Multivitamin for Women - with Vitamin A, Lutein & Lycopene - 60 Veg Capsules","price":"699","ratings":"","image":"https://cdn.shopify.com/s/files/1/1375/4957/products/multivitamin-capsules-for-women_375x.jpg?v=1638428329"},
 {"name":"Organic Apple Cider Vinegar - 750mL","price":"499","ratings":4,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/apple-cider-vinegar-bottel_1280x.jpg?v=1627897442"},
 {"name":" extra virgin coconut oil 1 extra virgin coconut oil 2 Extra Virgin Coconut Oil (Cold Pressed) For Skin & Hair - 400 ml","price":"499","ratings":3.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/extra-virgin-coconut-oil-bottel_375x.jpg?v=1629268984"},
@@ -11,6 +21,7 @@ var wowProducts=
 {"name":"Super Green Capsules - with Moringa, Wheatgrass, Spirulina, ACV, Beetroot, Chlorophyll & Pumpkin Seed - 550mg - 60 Veg Capsules","price":"699","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/Supergreen1_1_375x.jpg?v=1618383267"},
 {"name":" Immunity Booster Capsules + Super Green Capsules - Net Vol - 120 Veg Capsules","price":"1398","ratings":4.5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/combo_4_1280x.jpg?v=1614065848"},
 {"name":"Immunity Booster Capsules - Support Healthy Immune System - 30 Veg Capsules","price":"399","ratings":5,"image":"https://cdn.shopify.com/s/files/1/1375/4957/products/ImmunityBooster30N1_1280x.jpg?v=1631180303"}
+
 ];
 
 var hairDiv = document.getElementById("hairDiv");
