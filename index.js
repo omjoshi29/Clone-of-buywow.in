@@ -162,6 +162,7 @@ let arr=[
     import navbar from "./components_head/navbar.js";
     
     head.innerHTML= navbar();
+    
 
 
 

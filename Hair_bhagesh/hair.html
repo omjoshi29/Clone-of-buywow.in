@@ -10,9 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style_bhagesh/main_css.css">
+    <link rel="stylesheet" href="./../Styles/minicart.css">
+    <link rel="stylesheet" href="./../navbar.css">
 </head>
 
 <body>
+    <div id="navbarinBody"></div>
     <div id="topImgDiv">
         <h2>Hair</h2>
         <img id="topImg"src="https://cdn.shopify.com/s/files/1/1375/4957/files/1920x512_14_ff73d8b3-11a7-4a24-bf8c-5705964f7f17.jpg?v=1647521885">
@@ -36,3 +39,16 @@
 <script src="/Hair_bhagesh/hair_scrift/hair.js">
 
 </script>
+
+<script type="module">
+    import navbar from "../components/navbar.js";
+    // console.log(navbar)
+    let header = document.querySelector("#navbarinBody")
+    header.innerHTML = navbar();
+  </script>
+  
+  <script src="./../Script.js"></script>
+  
+  <!-- FOOTER -->
+ 
+  <script type="module" src="./../Script.js"></script>

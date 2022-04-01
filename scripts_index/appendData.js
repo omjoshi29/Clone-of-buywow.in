@@ -40,6 +40,7 @@ const append= (info,parent) =>{
     btn.setAttribute("id","cartbtn")
     btn.addEventListener("click",()=>{
         goToCart(ele);
+        location.reload();
     })
 
     div.append(image,name,price,keep,btn);
@@ -53,6 +54,7 @@ const append= (info,parent) =>{
  const goToCart= (ele)=>{
       cartArr.push(ele);
       localStorage.setItem("cartArr",JSON.stringify(cartArr));
+    
  }
 
 
