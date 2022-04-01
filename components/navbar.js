@@ -236,7 +236,7 @@ const navbar=()=>
  <input type="text" id="searcch_Any_Produ" placeholder="Search Products" oninput="debounce(main,2000)">
 
  <diV id="showdsearchata"></div>
-  
+  <div id="show"><div>
 </div>`;
 
 }
