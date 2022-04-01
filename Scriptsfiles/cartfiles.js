@@ -1,5 +1,5 @@
 var cartArr = JSON.parse(localStorage.getItem("cartArr"));
-console.log(cartArr);
+// console.log(cartArr);
 
 var cartdiv = document.getElementById("cartdiv");
 

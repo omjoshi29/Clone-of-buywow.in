@@ -67,6 +67,28 @@ function func(e)
   localStorage.setItem("Address",JSON.stringify(Addressarr))
   window.location.href="./ProccedPayment.html"
 }
+var cartArr = JSON.parse(localStorage.getItem("cartArr"));
+console.log(cartArr)
+let dispaly_cart_product=document.querySelector("#dispaly_cart_product")
 
+cartArr.map((ele)=>
+{
+  let Productsdiv=document.createElement("div")
+  Productsdiv.setAttribute("id","Productsdiv")
+  let innerProductsdiv=document.createElement("div")
+  innerProductsdiv.setAttribute("id","innerProductsdiv")
+  var name=document.createElement("p")
+  name.innerText=ele.name
+  var price=document.createElement("p")
+  price.innerText="₹ "+ele.price
+  var imgcart=document.createElement("img")
+  imgcart.src=ele.image
+  imgcart.setAttribute("id","imgcart")
+  innerProductsdiv.append(imgcart,price,name)
+  
+  dispaly_cart_product.append(innerProductsdiv)
+
+})
+// dispaly_cart_product.innerHTML="jdfhfhmbj"
 
 

@@ -46,14 +46,15 @@
 .modal-body {
   padding: 8px 7px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 
 }
 
-.modal-body>div{
-  /* border: solid; */
+.modal-body>div:nth-child(1){
+  border: solid;
+  
   height: 420px;
-  width: 50%;
+  width: 2000px;
 }
 #overlay {
   position: fixed;
@@ -119,3 +120,26 @@ input
   width: 90px;
   height: 40px;
 }
+#dispaly_cart_product
+{
+  display: block;
+  overflow:scroll;
+  border: solid;
+  height: 300px;
+  gap: 10px;
+}
+
+#innerProductsdiv{
+  margin-top: 10px;
+  display: flex;
+ height: auto;
+  border: solid 2px red;
+  font-size: 14px;
+  gap: 30px;
+}
+#imgcart
+{
+  height: 100px;
+  width: 100px;
+}
+

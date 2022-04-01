@@ -15,10 +15,13 @@
     <link rel="stylesheet" href="./Styles/cart.css">
     <link href="./PaymentStyle/PaymentPopup.css" rel="stylesheet">
     <script defer src="./PaymentScript.js"></script>
+    <link rel="stylesheet" href="./Styles/minicart.css">
+    <link rel="stylesheet" href="./navbar.css">
 
 </head>
 
 <body>
+  <div id="navbarinBody"></div>
     <h1 id="h1cart">Your Cart</h1>
     <div id="emptycart"></div>
     <div id="cartdiv"></div>
@@ -60,7 +63,11 @@
                   </form>
           </div>
           
-          <div></div>
+          <div id="dispaly_cart_product">
+            <div>
+            
+            </div>
+          </div>
         </div>
       </div>
       <div id="overlay"></div>
@@ -79,3 +86,15 @@ function cardpayment()
   window.location.href="./../payment.html"
 }
 </script>
+<script type="module">
+  import navbar from "./components/navbar.js";
+  // console.log(navbar)
+  let header = document.querySelector("#navbarinBody")
+  header.innerHTML = navbar();
+</script>
+
+<script src="./Script.js"></script>
+
+<!-- FOOTER -->
+<script type="module" src="footer.js"></script>
+<script type="module" src="./Script.js"></script>
