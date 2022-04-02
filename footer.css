@@ -89,7 +89,7 @@ ul li{
 }
 @media all and (min-width:50px) and (max-width:380px){
     #footer{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(5,1fr);
         padding-left: 20px;
 
@@ -98,6 +98,11 @@ ul li{
         /* margin-top: 238px; */
         margin-left: -31px;
         margin-top: -60px;
+    }
+    #ic{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     #one{
         width: 60%;
