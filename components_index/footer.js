@@ -22,11 +22,11 @@ const footer= () =>{
 </div>
 <div id="three">
     <b>MAIN MENU</b><br>
-    <a href="#" id="a">Skin</a><br>
-    <a href="#" id="a">Hair</a><br>
-    <a href="#" id="a">Bath & Body</a><br>
+    <a href="./../skin/skin.html" id="a">Skin</a><br>
+    <a href="./../Hair_bhagesh/hair.html" id="a">Hair</a><br>
+    <a href="./../bathandbody.html" id="a">Bath & Body</a><br>
      <a href="#" id="a">Mother & Child</a><br>
-     <a href="#" id="a">Wellness</a><br>
+     <a href="./../wellness-hair-vanish.html" id="a">Wellness</a><br>
      <a href="#" id="a">Nutrition & Health</a><br>
      <a href="#" id="a">Combos</a><br>
      <a href="#" id="a">Collections</a><br>

@@ -5,7 +5,8 @@
 }
 .one{
     text-align: center;
-    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
 }
 #banner img{
     margin-left: auto;

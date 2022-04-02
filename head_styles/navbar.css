@@ -163,7 +163,7 @@ margin-top: 30px;
     position: relative;
     display: inline-block;
     color: rgb(177, 174, 174);
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Corbel Light';
 
 
@@ -198,7 +198,7 @@ a:hover{
 
     /* color: rgb(146, 43, 43); */
     font-family: 'Corbel Light';
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .dropdown:hover .dropdown-content {

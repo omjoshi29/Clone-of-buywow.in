@@ -16,7 +16,7 @@ const navbar=()=>
               <!-- <-------manubar-----> 
 
       <div id="mainnav">
-          <div><a href="index.html"><img id="heder-img"  src="https://cdn.shopify.com/s/files/1/1375/4957/files/WOW_logo-02-02-01_5f70367a-c63c-479d-9ebe-21f1eebf6189_256x.png?v=1640789890"></a></div>
+          <div><a href="./../index.html"><img id="heder-img"  src="https://cdn.shopify.com/s/files/1/1375/4957/files/WOW_logo-02-02-01_5f70367a-c63c-479d-9ebe-21f1eebf6189_256x.png?v=1640789890"></a></div>
 
           <div>
 
@@ -26,7 +26,7 @@ const navbar=()=>
 <!-- Skin Drop Down -->
 <div>
 <div class="dropdown">
-  <span class="main_bar"><a href="./skin/skin.html">Skin</a></span>
+  <span class="main_bar"><a href="./../skin/skin.html">Skin</a></span>
   <div class="dropdown-content">
       <a href="../skin/face-wash.html"> <p> Face Wash</p></a>
           <a href="../skin/face-scrub.html"> <p> Face Scrub</p></a>
@@ -43,14 +43,14 @@ const navbar=()=>
 
 <div>
 <div class="dropdown">
-  <span><a href="./Hair_bhagesh/hair.html">Hair</a></span>
+  <span><a href="./../Hair_bhagesh/hair.html">Hair</a></span>
   <div class="dropdown-content">
      
-          <a href="./Hair_bhagesh/hairoil.html"  ><p> Hair Oil </p></a>
+          <a href="./../Hair_bhagesh/hairoil.html"  ><p> Hair Oil </p></a>
          
-          <a href="./Hair_bhagesh/combokit.html"  ><p>  Hair Combo Kit</p></a>
-          <a href="./Hair_bhagesh/shampoo.html"  ><p> Shampoo </p></a>
-          <a href="./Hair_bhagesh/conditioner.html"  ><p> Conditioner </p></a>
+          <a href="./../Hair_bhagesh/combokit.html"  ><p>  Hair Combo Kit</p></a>
+          <a href="./../Hair_bhagesh/shampoo.html"  ><p> Shampoo </p></a>
+          <a href="./../Hair_bhagesh/conditioner.html"  ><p> Conditioner </p></a>
           
           <a href="./Hair_bhagesh/scalp_brush.html"  ><p>  Scalp Brush</p></a>
           <a href="./Hair_bhagesh/hairspray.html"  ><p> Hair Spray / Revitalizer </p></a>
@@ -113,15 +113,15 @@ const navbar=()=>
 
           <div>
               <div class="dropdown">
-                  <span>   <a href="./Nutration_&_health_bhagesh/nutrition_&_health.html">Nutrition&Health</a></span>
+                  <span>   <a href="./../Nutration_&_health_bhagesh/nutrition_&_health.html">Nutrition&Health</a></span>
                   <div class="dropdown-content">
                       
-                      <a href="./Nutration_&_health_bhagesh/immunity_care.html"><p>Immunity Care</p></a>
-                      <a href="./Nutration_&_health_bhagesh/protin.html"><p>Proteins</p></a>
-                      <a href="./Nutration_&_health_bhagesh/vitamins.html"><p>Vitamins</p></a>
-                      <a href="./Nutration_&_health_bhagesh/skin_hair_protection.html"><p>Skin & Hair Nutrition</p></a>
-                      <a href="./Nutration_&_health_bhagesh/omega.html"><p>Omega Fatty Acids</p></a>
-                      <a href="./Nutration_&_health_bhagesh/antioxdiant.html"><p>Antioxidants</p></a>
+                      <a href="./../Nutration_&_health_bhagesh/immunity_care.html"><p>Immunity Care</p></a>
+                      <a href="./../Nutration_&_health_bhagesh/protin.html"><p>Proteins</p></a>
+                      <a href="./../Nutration_&_health_bhagesh/vitamins.html"><p>Vitamins</p></a>
+                      <a href="./../Nutration_&_health_bhagesh/skin_hair_protection.html"><p>Skin & Hair Nutrition</p></a>
+                      <a href="./../Nutration_&_health_bhagesh/omega.html"><p>Omega Fatty Acids</p></a>
+                      <a href="./../Nutration_&_health_bhagesh/antioxdiant.html"><p>Antioxidants</p></a>
                      
                   </div>
                 </div> 
@@ -131,7 +131,7 @@ const navbar=()=>
 
 
               <div class="dropdown">
-                  <span>   <a href="./combos_bhagesh/combos.html">Combos</a></span>
+                  <span>   <a href="./../combos_bhagesh/combos.html">Combos</a></span>
                   <div class="dropdown-content">
                    
                   </div>
@@ -139,15 +139,15 @@ const navbar=()=>
 
 
               <div class="dropdown">
-                  <span>   <a href="./collection_bhagesh/collections.html">Collection</a></span>
+                  <span>   <a href="./../collection_bhagesh/collections.html">Collection</a></span>
                   <div class="dropdown-content">
-                      <a href="./collection_bhagesh/apple_.html"><p> Apple Cider Vinegar</p></a>
-                      <a href="./collection_bhagesh/alover.html"><p>  Aloe Vera</p></a>
-                       <a href="./collection_bhagesh/amla.html"><p>Amla</p></a>
-                      <a href="./collection_bhagesh/rice_water.html"><p>Rice Water</p></a>
-                      <a href="./collection_bhagesh/himalaya_rose.html"><p> Himalayan Rose</p></a>
-                      <a href="./collection_bhagesh/red_onion_black_seed_oil.html"><p> Red Onion Black Seed Oil</p></a>
-                      <a href="./collection_bhagesh/vitamin_c.html"><p>   Vitamin C</p></a>
+                      <a href="./../collection_bhagesh/apple_.html"><p> Apple Cider Vinegar</p></a>
+                      <a href="./../collection_bhagesh/alover.html"><p>  Aloe Vera</p></a>
+                       <a href="./../collection_bhagesh/amla.html"><p>Amla</p></a>
+                      <a href="./../collection_bhagesh/rice_water.html"><p>Rice Water</p></a>
+                      <a href="./../collection_bhagesh/himalaya_rose.html"><p> Himalayan Rose</p></a>
+                      <a href="./../collection_bhagesh/red_onion_black_seed_oil.html"><p> Red Onion Black Seed Oil</p></a>
+                      <a href="./../collection_bhagesh/vitamin_c.html"><p>   Vitamin C</p></a>
                       
                   </div>
                 </div> 
