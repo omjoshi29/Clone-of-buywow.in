@@ -402,6 +402,7 @@ border-radius: 5px;
     width:70%;
     overflow:scroll;
     margin-top: 60px;
+    margin-left: 42px;
 }
 #div{
     display:flex;
