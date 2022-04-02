@@ -50,6 +50,11 @@ width:205.23px;
 font-size: 16px;
 margin-top: 10px;
 }
+#btn{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
 #h2_2{
 color:#202626;
 font-size: 37px;
@@ -94,11 +99,12 @@ margin-top: 50px;
 }
 
 #plant{
-height:629px;
+height:580px;
 width:80%;
 margin-top: 100px;
 margin-left: 150px;
-position:relative;
+object-fit: cover;
+
 }
 #h3{
 color: white;
