@@ -55,8 +55,7 @@
   /* border: solid; */
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 border-radius: 5px;
-  height: 420px;
-  width: 450px;
+
 }
 #overlay {
   position: fixed;
@@ -107,7 +106,7 @@ input, label {
 
 .form-group {
 
-  margin:auto;
+  
   width: 100%;
 }
 input
@@ -122,9 +121,9 @@ input
   color: white;
   cursor: pointer;
 }
-.form-control {
+/* .form-control {
   float: left;
-}
+} */
 #popimagelogo
 {
   width: 90px;
