@@ -49,6 +49,7 @@ height:58px;
 width:205.23px;
 font-size: 16px;
 margin-top: 10px;
+cursor: pointer;
 }
 #btn{
     margin-left:auto;
@@ -96,6 +97,7 @@ object-fit: cover;
 #btn2{
 margin-left: 680px; 
 margin-top: 50px;    
+cursor: pointer;
 }
 
 #plant{
