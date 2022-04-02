@@ -162,6 +162,7 @@ margin: auto;
 }
 
 #items {
+    font-family: 'Corbel Light';
     
 margin-top: 30px;
  
@@ -192,6 +193,7 @@ margin-top: 30px;
     width: auto;
 }
 .dropdown {
+    font-family: 'Corbel Light';
     position: relative;
     display: inline-block;
     color: rgb(177, 174, 174);
@@ -213,6 +215,7 @@ a:hover{
 }
 .dropdown-content {
 
+    font-family: 'Corbel Light';
     display: none;
     position: absolute;
     background-color: #f9f9f9;
