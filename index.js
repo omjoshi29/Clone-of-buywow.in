@@ -110,25 +110,25 @@ let arr=[
     {
               image:"https://cdn.shopify.com/s/files/1/1375/4957/products/Ubtan-FW-150-1_410x.jpg?v=1639421804",
               name:"Ubtan Foaming Face Wash With Built-In Face Brush For Tan Removal",
-              price:"₹"+"399.00",
+              price:"399.00",
           
           },
           {
               image:"https://cdn.shopify.com/s/files/1/1375/4957/products/ubtan-face-wash-tube_410x.jpg?v=1639421776",
               name:"Ubtan Face Wash - 100mL",
-              price:"₹"+"249.00",
+              price:"249.00",
           
           },
           {
               image:"https://cdn.shopify.com/s/files/1/1375/4957/products/Ubtan-scrub-1_e38d7e1b-f62f-4a66-87b8-42ef3e57f381_410x.jpg?v=1635142931",
               name:"Ubtan Face & Body Scrub With Chickpea Flour, Almond Shell",
-              price:"₹"+"399.00",
+              price:"399.00",
           
           },
           {
               image:"https://cdn.shopify.com/s/files/1/1375/4957/products/ubtan-serum-1_0cee3e90-4048-46d6-b838-24e0c755e32d_410x.jpg?v=1634724825",
               name:"Ubtan Face Serum - OIL FREE - For Anti Tanning, Radiance Boosting,",
-              price:"₹"+"599.00",
+              price:"599.00",
           
           }
     ]
