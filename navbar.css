@@ -198,12 +198,13 @@ margin-top: 30px;
     display: inline-block;
     color: rgb(177, 174, 174);
     font-size: 18px;
-    font-family: 'Corbel Light';
+    
 
 
 
 }
 a{
+    font-family: 'Corbel Light';
     color: black;
     text-decoration: none;
     
@@ -237,12 +238,14 @@ a:hover{
 }
 
 .dropdown:hover .dropdown-content {
+    font-family: 'Corbel Light';
     display: block;
     /* color: aqua; */
 
 }
 
 li {
+    font-family: 'Corbel Light';
     display: list-item;
     text-align: -webkit-match-parent;
 }
