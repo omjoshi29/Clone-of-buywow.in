@@ -16,7 +16,7 @@ const navbar=()=>
               <!-- <-------manubar-----> 
 
       <div id="mainnav">
-          <div><a href="navba.html"><img id="heder-img"  src="https://cdn.shopify.com/s/files/1/1375/4957/files/WOW_logo-02-02-01_5f70367a-c63c-479d-9ebe-21f1eebf6189_256x.png?v=1640789890"></a></div>
+          <div><a href="index.html"><img id="heder-img"  src="https://cdn.shopify.com/s/files/1/1375/4957/files/WOW_logo-02-02-01_5f70367a-c63c-479d-9ebe-21f1eebf6189_256x.png?v=1640789890"></a></div>
 
           <div>
 
