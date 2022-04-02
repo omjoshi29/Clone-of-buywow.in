@@ -115,4 +115,20 @@
 
 
 
-
+#topImgDiv{
+    width: 80%;
+    height: 360px;    
+    margin: auto;
+    
+}
+#topImgDiv>h2{
+    font-weight: 100%;
+    /* font-family: 'Times New Roman', Times, serif; */
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+}
+#topImg{
+    width: 100%;
+    height: 80%;
+}
