@@ -107,7 +107,7 @@ input, label {
 .form-group {
 
   
-  width: 100%;
+  width: 80%;
 }
 input
 {
@@ -121,9 +121,9 @@ input
   color: white;
   cursor: pointer;
 }
-/* .form-control {
+.form-control {
   float: left;
-} */
+}
 #popimagelogo
 {
   width: 90px;
