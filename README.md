@@ -1,5 +1,5 @@
 <h1 align="center">Clone of buywow.in</h1>
-This project is a clone of ”https://www.buywow.in”, which is a health, grooming, and beauty Products website. This is a collaborative project, completed within 6 days with a team of 6 members, as a part of the 'Construct-week' project at Masai School unit-3. This website has end-to-end functionalities from Signup/login and searching the Products and adding products and removing the products from the cart page. where we had incorporated two payment options which include online payment and pay through the card. We had added many sorting techniques to sort the products on their respective pages based on their ratings, and prices, alphabetically. We had used import and export for the navbar and footer. We had incorporated an API to automatically detect the user location which has been entered in the shipping address. We have incorporated the media queries in this website to make the website compatible with all screens sizes.
+This project is a clone of "https://www.buywow.in/", which is a health, grooming, and beauty Products website. This is a collaborative project, completed within 6 days with a team of 6 members, as a part of the 'Construct-week' project at Masai School unit-3. This website has end-to-end functionalities from Signup/login and searching the Products and adding products and removing the products from the cart page. where we had incorporated two payment options which include online payment and pay through the card. We had added many sorting techniques to sort the products on their respective pages based on their ratings, and prices, alphabetically. We had used import and export for the navbar and footer. We had incorporated an API to automatically detect the user location which has been entered in the shipping address. We have incorporated the media queries in this website to make the website compatible with all screens sizes.
 <hr>
 <p>Deployed Link:</p>
 
@@ -43,7 +43,7 @@ This project is a clone of ”https://www.buywow.in”, which is a health, groom
 
 * Authencating the login Details with the signup Details using Local Storage.
 
-## Language
+## Languages
 * HTML
 * CSS
 * JavaScript
@@ -55,7 +55,7 @@ This project is a clone of ”https://www.buywow.in”, which is a health, groom
 
 * Netlify (For deploying the website.)
 
-* GitHub (To work remotedly with Team memebers).
+* GitHub (To work remotely with Team memebers).
 
 
 
