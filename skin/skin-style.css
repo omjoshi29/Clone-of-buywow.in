@@ -123,10 +123,10 @@
 }
 #topImgDiv>h2{
     font-weight: 100%;
-    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 2em;
-    font-weight: normal;
+    font-weight: 500;
 }
 #topImg{
     width: 100%;
