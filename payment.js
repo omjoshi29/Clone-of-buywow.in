@@ -4,6 +4,7 @@ let address= JSON.parse(localStorage.getItem("address"));
 
 
 let Addressarr=[];
+let final_amount= [];
 
 let information= JSON.parse(localStorage.getItem("Info"));
 
@@ -12,7 +13,9 @@ console.log(name)
 document.querySelector("#app1").innerText = name;
 document.querySelector("#app2").innerText = address;
 
-
+document.querySelector("#logo").addEventListener("click",()=>{
+    window.location.href= "index.html"
+})
 
 let arr= JSON.parse(localStorage.getItem("cartArr"));
 
@@ -114,17 +117,31 @@ document.querySelector("#apply").addEventListener("click",()=>{
 discount();
 })
 
-let val= document.querySelector("#finalAmount").innerText;
+
+
+let value_final= document.querySelector("#finalAmount").innerText;
+
+final_amount.push(value_final);
+
+localStorage.setItem("finalAmount",JSON.stringify(final_amount));
 
 const discount = ()=>{
 
 let coupon= document.querySelector("#voucher").value;
 
+
 if(coupon == "wow30"){
-  
-    let new_val = Math.ceil(val *30/100);
+    let final_amount= [];
+
+    let new_val = Math.ceil(value_final*30/100);
     console.log(new_val)
-    document.querySelector("#finalAmount").innerText= val - new_val;
+    document.querySelector("#finalAmount").innerText= value_final - new_val;
+
+    let value_discount= document.querySelector("#finalAmount").innerText;
+
+    final_amount.push(value_discount);
+
+   localStorage.setItem("finalAmount",JSON.stringify(final_amount));
 }
 
 }
@@ -133,4 +150,5 @@ if(coupon == "wow30"){
 document.querySelector("#btn").addEventListener("click",()=>{
     window.location.href= "credentials.html"
 })
+
 

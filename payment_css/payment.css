@@ -43,14 +43,15 @@ height:auto;
    margin-left: 200px;
    margin-top: 25px;
    border-radius: 8px;
+   
 }
 #row1{
    display: flex;
-
+   justify-content: space-between;
 }
 #row2{
    display: flex;
-
+   justify-content: space-between;
 }
 #line{
     margin-top:0px;
@@ -409,16 +410,28 @@ border-radius: 5px;
 }
 #app1{
     margin-top: 20px;
-    margin-left:95px;
+   
+   
 }
 #app2{
     margin-top:0px;
-    margin-left:30px;
+ 
 }
 #nam{
     margin-top:20px;
+    margin-left:20px;
 }
 #sheep{
     margin-top:0px;
+    margin-left:20px;
 }
 
+#row1>a{
+    margin-top:22px;
+    font-size: 16px;
+    margin-right:20px;
+}
+#row2>a{
+    font-size: 16px;
+    margin-right:20px;
+}

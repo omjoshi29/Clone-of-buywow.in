@@ -1,6 +1,14 @@
+let sub_value= JSON.parse(localStorage.getItem("grandTotal"));
+
+document.querySelector("#total").innerText = sub_value;
+
 let arr= JSON.parse(localStorage.getItem("cartArr"));
 
 let appendedCart= document.querySelector("#appendedCart");
+
+document.querySelector("#logo").addEventListener("click",()=>{
+    window.location.href= "index.html"
+})
 
 const display = (arr)=>{
 console.log(arr)
