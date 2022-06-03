@@ -44,12 +44,12 @@ This project is a clone of "https://www.buywow.in/", which is a health, grooming
 * Authencating the login Details with the signup Details using Local Storage.
 
 ## Languages
-* HTML
+* React
+* Redux
 * CSS
-* JavaScript
-## Tools
+* Bootstrap
 
-* Postman API
+## Tools
 
 * VS Code
 
