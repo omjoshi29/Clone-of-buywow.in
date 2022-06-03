@@ -10,9 +10,9 @@ This project is a clone of "https://www.buywow.in/", which is a health, grooming
 
 * Omkar Joshi: https://github.com/omjoshi29
 
-* Pratik Bhimrao Paul : https://github.com/Pratik8279
+* Pratik Paul : https://github.com/Pratik8279
 
-* KosireddiSreeram : https://github.com/kosireddisreeram
+* Kosireddi Sreeram : https://github.com/kosireddisreeram
 
 * Katravath Prabhu: https://github.com/prabhuRV
 
